@@ -1,7 +1,16 @@
 # 🚀 NOVA Tech Models 3D
 
+[![Live Demo](https://img.shields.io/badge/Website-LIVE%20ON%20GITHUB%20PAGES-00e5ff?style=for-the-badge&logo=github)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
+[![WCAG 2.2](https://img.shields.io/badge/Accessibility-WCAG%202.2%20AAA-success?style=for-the-badge)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
+
 > **Next-Generation Technological Modeling, Aerospace Engineering & AI Robotics**  
-> Live Showcase & Interactive 3D Configurator Platform.
+> 🔗 **Accesează site-ul live aici:** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)**
+
+---
+
+### 🌐 [👉 Deschide Website-ul NOVA Tech Models Live în Browser](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
+
+---
 
 ![NOVA Tech Models](./assets/nova-hero.jpg)
 
