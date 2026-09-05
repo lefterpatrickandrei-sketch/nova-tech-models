@@ -1336,3 +1336,55 @@ html.light .blueprint-bg {
   display: flex;
   justify-content: space-between;
 }
+
+/* 3D ATELIER ENGINE & INTERACTIVE CONTROLS */
+.btn-3d-model {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 0.45rem 0.95rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-3d-model:hover, .btn-3d-model.active {
+  background: rgba(0, 229, 255, 0.18);
+  border-color: var(--brand-primary);
+  color: var(--brand-primary);
+}
+
+.btn-hud {
+  background: rgba(8, 11, 20, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-hud:hover, .btn-hud.active {
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
+  color: #07080d;
+  font-weight: 700;
+}
+
+/* 3D TILT EFFECT FOR CARDS */
+.tilt-card {
+  transition: transform 0.12s ease-out, box-shadow 0.2s ease-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 229, 255, 0.12);
+}

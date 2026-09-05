@@ -742,6 +742,51 @@
           </p>
         </div>
 
+        <!-- INTERACTIVE 3D ENGINEERING LAB -->
+        <div class="atelier-3d-card" style="background: var(--bg-surface-elevated); border: 1px solid rgba(0, 229, 255, 0.3); border-radius: var(--radius-xl); overflow: hidden; margin-bottom: 3.5rem; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);">
+          <!-- Top Bar -->
+          <div style="background: var(--bg-surface); padding: 1rem 1.75rem; border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span style="display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: var(--brand-primary); box-shadow: 0 0 10px var(--brand-primary);"></span>
+              <strong style="font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-primary);">Laborator 3D Interactiv de Atelier</strong>
+            </div>
+
+            <!-- Model Switcher Tabs -->
+            <div class="model-3d-switcher" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" class="btn-3d-model active" data-model="planor">✈️ Planor Faza II</button>
+              <button type="button" class="btn-3d-model" data-model="fokker">🛩️ Fokker D.VII Biplan</button>
+              <button type="button" class="btn-3d-model" data-model="stealth">🚀 Mach-4 Stealth</button>
+              <button type="button" class="btn-3d-model" data-model="cruiser">⚓ Crucișător Naval</button>
+            </div>
+          </div>
+
+          <!-- 3D Canvas Area & HUD -->
+          <div style="position: relative; width: 100%; height: 480px; background: radial-gradient(circle at center, #111728 0%, #06080e 100%); cursor: grab; overflow: hidden;" id="canvas-3d-wrapper">
+            <canvas id="atelier-3d-canvas" width="1000" height="480" style="width: 100%; height: 100%; display: block;"></canvas>
+
+            <!-- Technical Overlays & HUD -->
+            <div style="position: absolute; top: 1.25rem; left: 1.5rem; pointer-events: none; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); line-height: 1.6;">
+              <div style="color: var(--brand-primary); font-weight: 700;">MODE: <span id="hud-mode-text">WIREFRAME SCHELET</span></div>
+              <div>MODEL: <span id="hud-model-text" style="color: #fff;">Planor Faza II (Balsa &amp; Tei)</span></div>
+              <div>ROTATION: <span id="hud-rot-text">X: 20° | Y: 45°</span></div>
+              <div>STATUS: <span style="color: var(--status-success);">60 FPS • INTERACTIVE 360°</span></div>
+            </div>
+
+            <!-- Interactive Hint -->
+            <div style="position: absolute; bottom: 1.25rem; left: 1.5rem; pointer-events: none; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-secondary); background: rgba(0,0,0,0.65); padding: 0.35rem 0.75rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+              🖱️ Trage cu mouse-ul / atinge pentru rotire 360° • Rotiță pentru zoom
+            </div>
+
+            <!-- 3D Display Mode Buttons -->
+            <div style="position: absolute; bottom: 1.25rem; right: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <button type="button" id="btn-mode-wire" class="btn-hud active" title="Schelet din baghete de balsa">📐 Schelet Balsa</button>
+              <button type="button" id="btn-mode-solid" class="btn-hud" title="Fuzelaj placat și împânzit">🛡️ Placat / Solid</button>
+              <button type="button" id="btn-mode-xray" class="btn-hud" title="Vedere cu linii de cotă și centraj">⚡ X-Ray &amp; Cote</button>
+              <button type="button" id="btn-reset-3d" class="btn-hud" title="Resetează camera">🔄 Reset</button>
+            </div>
+          </div>
+        </div>
+
         <div class="blueprint-gallery">
           <!-- Item 1: Planor Faza II Blueprint -->
           <div class="blueprint-item" data-full="./assets/planor-blueprint.jpg" data-title="Planor Faza II — Desen Tehnic de Atelier" data-desc="Schema tehnică completă: fuzelaj conturat, ampenaj orizontal, derivă proporționată și aripi cu nervuri ranforsate. Reprezintă trecerea de la carton la balsa.">
@@ -934,12 +979,12 @@
             Arhiva Completă de Planuri, Cursuri &amp; Scheme Tehnice
           </h3>
           <p style="font-size: 0.95rem; color: var(--text-secondary); max-width: 680px; margin: 0 auto 1.75rem; line-height: 1.6;">
-            Accesează direct folderul securizat <strong>NOVA TECH MODELS</strong> pe Google Drive: volumele integrale Florin G. Ursa (PDF, 1000+ pagini), desenele cotate Faza I &amp; II, planșele din lemn de balsa și fișele tehnologice de atelier.
+            Pentru protejarea materialelor didactice și a desenelor cotate, accesul la dosarul oficial Google Drive (1000+ pagini tratate Florin G. Ursa &amp; planșe de atelier) se acordă gratuit la cerere, pe bază de autorizare nominală.
           </p>
-          <a href="https://drive.google.com/drive/folders/1ZC9yyabVBYV2QPtvSvIvqFAo55iqdNjM" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.85rem; font-weight: 700;">
-            <span>Deschide Google Drive NOVA Tech Models</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-          </a>
+          <button type="button" id="open-access-modal" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.6rem; padding: 0.85rem 1.85rem; font-weight: 700; cursor: pointer;">
+            <span>🔒 Solicită Acces Gratuit la Arhiva Google Drive</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </button>
         </div>
       </div>
     </section>
@@ -990,10 +1035,10 @@
           </div>
 
           <div style="background: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.5rem; display: flex; align-items: center; gap: 1.25rem;">
-            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.25); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">📂</div>
+            <div style="width: 48px; height: 48px; border-radius: var(--radius-sm); background: rgba(99, 102, 241, 0.1); border: 1px solid rgba(99, 102, 241, 0.25); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0;">🔒</div>
             <div>
-              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Google Drive Documentație</div>
-              <a href="https://drive.google.com/drive/folders/1ZC9yyabVBYV2QPtvSvIvqFAo55iqdNjM" target="_blank" rel="noopener noreferrer" style="color: var(--brand-secondary); font-weight: 700; text-decoration: none; font-size: 1.05rem; display: inline-block; margin-top: 0.25rem;">Deschide Dosarul Cloud ↗</a>
+              <div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em;">Arhivă Documentație Cloud</div>
+              <button type="button" id="open-access-modal-2" style="background: none; border: none; padding: 0; color: var(--brand-secondary); font-weight: 700; font-size: 1.05rem; cursor: pointer; display: inline-block; margin-top: 0.25rem; text-decoration: underline;">Solicită Acces la Dosar ↗</button>
             </div>
           </div>
         </div>
@@ -1088,6 +1133,68 @@
           <h3 id="lightbox-title" style="font-size: 1.25rem; color: var(--text-primary); margin-bottom: 0.25rem;"></h3>
           <p id="lightbox-desc" style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;"></p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL: SOLICITĂ ACCES LA CURSURI & PLANURI (OPȚIUNEA 2) -->
+  <div id="access-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-labelledby="access-modal-title">
+    <div class="lightbox-content" style="max-width: 580px; padding: 2.5rem; background: var(--bg-surface-elevated); border: 1px solid var(--brand-primary); border-radius: var(--radius-xl); box-shadow: 0 25px 60px rgba(0, 229, 255, 0.15);">
+      <button type="button" id="access-modal-close" class="lightbox-close" aria-label="Închide fereastra">✕</button>
+
+      <div id="access-modal-intro" style="text-align: center; margin-bottom: 1.75rem;">
+        <div style="width: 56px; height: 56px; border-radius: var(--radius-md); background: rgba(0, 229, 255, 0.12); border: 1px solid rgba(0, 229, 255, 0.3); display: inline-flex; align-items: center; justify-content: center; font-size: 1.75rem; margin-bottom: 1rem;">
+          🔒
+        </div>
+        <h3 id="access-modal-title" style="font-size: var(--font-size-2xl); color: var(--text-primary); margin-bottom: 0.5rem;">
+          Acces Securizat la Arhiva Tehnică
+        </h3>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+          Pentru protejarea materialelor didactice și a desenelor cotate, accesul la dosarul oficial Google Drive (1000+ pagini tratate Florin G. Ursa &amp; planșe de atelier) se acordă gratuit la cerere.
+        </p>
+      </div>
+
+      <form id="access-request-form">
+        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="form-group">
+            <label for="req-name" style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; display: block;">Numele tău complet *</label>
+            <input type="text" id="req-name" class="form-input" placeholder="ex. Florin Radu" required style="width: 100%;">
+          </div>
+
+          <div class="form-group">
+            <label for="req-email" style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; display: block;">Adresa ta de email *</label>
+            <input type="email" id="req-email" class="form-input" placeholder="nume@domeniu.ro" required style="width: 100%;">
+          </div>
+
+          <div class="form-group">
+            <label for="req-level" style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.35rem; display: block;">Nivelul / Interesul tău de modelism</label>
+            <select id="req-level" class="form-input" style="width: 100%;">
+              <option value="basic">Nivel Basic (Hârtie, Carton, Debutant)</option>
+              <option value="mediu" selected>Nivel Mediu (Balsa, Polistiren, Planoare Faza I/II)</option>
+              <option value="specialist">Nivel Specialist (Avansat, Aerodinamică, RC)</option>
+              <option value="pro">Nivel Profesionist (CAD, CNC, Print 3D, Competiții)</option>
+              <option value="educator">Instructor / Profesor / Părinte</option>
+            </select>
+          </div>
+
+          <button type="submit" id="btn-submit-access" class="btn btn-primary" style="width: 100%; padding: 0.95rem; font-size: 1rem; margin-top: 0.5rem; justify-content: center;">
+            <span>Validează &amp; Deblochează Dosarul Google Drive</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </button>
+        </div>
+      </form>
+
+      <!-- Success state hidden by default -->
+      <div id="access-success-box" style="display: none; text-align: center; padding-top: 0.5rem;">
+        <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎉</div>
+        <h4 style="font-size: 1.3rem; color: var(--status-success); margin-bottom: 0.5rem;">Acces Autorizat cu Succes!</h4>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+          Cheia ta de acces a fost generată. Poți deschide direct folderul oficial de documentație Google Drive:
+        </p>
+        <a id="access-drive-direct-link" href="https://drive.google.com/drive/folders/1ZC9yyabVBYV2QPtvSvIvqFAo55iqdNjM" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.9rem 1.75rem; text-decoration: none;">
+          <span>📂 Deschide Google Drive (Acces Deplin)</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+        </a>
       </div>
     </div>
   </div>
