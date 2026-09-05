@@ -3,13 +3,12 @@
 [![Live Demo](https://img.shields.io/badge/Website-LIVE%20ON%20GITHUB%20PAGES-00e5ff?style=for-the-badge&logo=github)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
 [![WCAG 2.2](https://img.shields.io/badge/Accessibility-WCAG%202.2%20AAA-success?style=for-the-badge)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
 
-> **Next-Generation Technological Modeling, Aerospace Engineering & AI Robotics**  
-> 🔗 **Pagina 1 (Catalog & Configurator):** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)**  
-> 📐 **Pagina 2 (NOVA Academy & Curriculum):** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/academy.html](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/academy.html)**
+> **Next-Generation Technological Modeling, Aerospace Engineering, AI Robotics & Academy**  
+> 🔗 **Link Unic Oficial:** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)**
 
 ---
 
-### 🌐 [👉 Deschide Catalogul 3D (Pagina 1)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/) | [📐 Deschide NOVA Academy (Pagina 2)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/academy.html)
+### 🌐 [👉 Deschide Platforma Completă NOVA Tech & Academy Live](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
 
 ---
 
