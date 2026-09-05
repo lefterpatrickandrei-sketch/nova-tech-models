@@ -4,11 +4,12 @@
 [![WCAG 2.2](https://img.shields.io/badge/Accessibility-WCAG%202.2%20AAA-success?style=for-the-badge)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
 
 > **Next-Generation Technological Modeling, Aerospace Engineering & AI Robotics**  
-> 🔗 **Accesează site-ul live aici:** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)**
+> 🔗 **Pagina 1 (Catalog & Configurator):** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)**  
+> 📐 **Pagina 2 (NOVA Academy & Curriculum):** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/academy.html](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/academy.html)**
 
 ---
 
-### 🌐 [👉 Deschide Website-ul NOVA Tech Models Live în Browser](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
+### 🌐 [👉 Deschide Catalogul 3D (Pagina 1)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/) | [📐 Deschide NOVA Academy (Pagina 2)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/academy.html)
 
 ---
 
