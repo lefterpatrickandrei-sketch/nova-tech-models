@@ -4,11 +4,13 @@
 [![WCAG 2.2](https://img.shields.io/badge/Accessibility-WCAG%202.2%20AAA-success?style=for-the-badge)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
 
 > **Next-Generation Technological Modeling, Aerospace Engineering, AI Robotics & Academy**  
-> 🔗 **Link Unic Oficial:** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)**
+> 🔗 **Website Oficial:** **[https://lefterpatrickandrei-sketch.github.io/nova-tech-models/](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)**  
+> 📂 **Arhivă Google Drive:** **[NOVA TECH MODELS Cloud Repository](https://drive.google.com/drive/folders/1ZC9yyabVBYV2QPtvSvIvqFAo55iqdNjM)**  
+> ✉️ **Contact Email:** `contact@novatechmodels.ro`
 
 ---
 
-### 🌐 [👉 Deschide Platforma Completă NOVA Tech & Academy Live](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/)
+### 🌐 [👉 Deschide Platforma Completă NOVA Tech & Academy Live](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/) | [📂 Deschide Google Drive Oficial](https://drive.google.com/drive/folders/1ZC9yyabVBYV2QPtvSvIvqFAo55iqdNjM)
 
 ---
 
