@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784 256" width="784" height="256" role="img" aria-labelledby="title">
+  <title id="title">NOVA Tech Models — Dihedral Chevron lockup</title>
+  <g id="symbol">
+    <path fill="#0F172A" d="M24 192 L128 88 L232 192 V136 L128 32 L24 136 Z"/>
+    <path fill="#C85A17" d="M72 224 L128 168 L184 224 V180 L128 124 L72 180 Z"/>
+  </g>
+  <g id="wordmark" fill="#0F172A">
+    <path d="M280 184 V72 H308 L364 128 V72 H392 V184 H364 L308 128 V184 Z"/>
+    <path fill-rule="evenodd" d="M472 70 A58 58 0 1 1 414 128 A58 58 0 0 1 472 70 Z M472 98 A30 30 0 1 0 502 128 A30 30 0 0 0 472 98 Z"/>
+    <path d="M546 72 H574 L596 154 L618 72 H646 L616 184 H576 Z"/>
+    <path fill-rule="evenodd" d="M682 72 H722 L752 184 H724 L718 161.6 H686 L680 184 H652 Z M702 102 L713 143 H691 Z"/>
+  </g>
+</svg>

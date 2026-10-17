@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">NOVA Tech Models — Dihedral Chevron symbol</title>
+  <g id="symbol">
+    <path fill="#0F172A" d="M24 192 L128 88 L232 192 V136 L128 32 L24 136 Z"/>
+    <path fill="#C85A17" d="M72 224 L128 168 L184 224 V180 L128 124 L72 180 Z"/>
+  </g>
+</svg>
