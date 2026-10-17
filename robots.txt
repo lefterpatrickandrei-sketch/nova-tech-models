@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lefterpatrickandrei-sketch.github.io/nova-tech-models/sitemap.xml
