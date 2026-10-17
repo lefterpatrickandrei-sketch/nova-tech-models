@@ -11,6 +11,10 @@
 
 ---
 
+<p align="center">
+  <img src="./v2/assets/img/nova-atelier-logo-1600.webp" width="240" alt="Emblema Oficială NOVA Tech Models — Aero · Racheto · FAI S7" />
+</p>
+
 ![Atelierul NOVA Tech Models — Machete Ariane 44P](./v2/assets/img/atelier-detaliere-1600.webp)
 
 ---
