@@ -63,20 +63,39 @@ nova-tech-models/
 ├── app.js              # Logica interactivă a Variantei 1
 ├── assets/             # Resursele grafice ale Variantei 1
 └── v2/                 # Varianta 2 — Editorial Aerospace Atelier (Reconstruită de la zero)
-    ├── index.html      # Arhitectura semantică HTML5 + SVG + Schema.org (7 secțiuni interactive)
-    ├── styles.css      # Design system OKLCH, temă Light/Dark ("Hârtie de Calc" / "Telemetrie Nocturnă")
+    ├── index.html      # Arhitectura semantică HTML5 + SVG reactiv + Schema.org (7 secțiuni interactive)
+    ├── styles.css      # Design system OKLCH + tokeni reactivi logo (--logo-ring, --logo-disc, --logo-n)
     ├── app.js          # Simulatoare SVG live, X-Ray comparator, Planșotecă, Cititor 3 volume, Glosar
-    └── assets/
-        └── img/        # 82 fișiere WebP optimizate (41 perechi -800.webp și -1600.webp)
+    ├── assets/
+    │   ├── logo.svg    # Lockup vectorial Vernier Monogram cu adaptare automată Light/Dark
+    │   ├── favicon.svg # Simbol vectorial Vernier Monogram reactiv la tema browserului
+    │   └── img/        # 82 fișiere WebP optimizate (41 perechi -800.webp și -1600.webp)
+    └── logos/          # Studio & Kit de Producție Identitate Vizuală (Vernier Monogram)
+        ├── index.html                      # Simulator interactiv de fundal + fișă de testare la scară
+        ├── vernier-reactive-overview.png   # Planșă comparativă: Universal / Mod Lumină / Mod Întunecat
+        ├── vernier-universal-symbol.svg    # Master Universal cu inel de contrast cupru (#C85A17)
+        ├── vernier-on-light-symbol.svg     # Master Mod Lumină (Disc #0F172A + N #F4EFE6)
+        ├── vernier-on-dark-symbol.svg      # Master Mod Întunecat / Negru (Disc #F8FAFC + N #0F172A)
+        └── kit/                            # 31 variante exportate (SVG, PNG 512/1024, ICO, PWA icons)
 ```
+
+---
+
+## 🎨 Sistem de Identitate Vizuală Reactiv la Fundal (`Vernier Monogram`)
+
+Emblema **Vernier Monogram** (discul de precizie cu monograma **N** teșită la $45^\circ$ și aripa delta de cupru în colțul dreapta-sus) este proiectată să își păstreze contrastul maxim pe orice suprafață:
+
+- **Pe fundal deschis (`On-Light` — `#FFFFFF` / `#FAF7F2`)**: Disc Slate Închis (`#0F172A`), monogramă **N** plină în nuanța hârtiei de calc (`#F4EFE6`) și aripă delta Cupru (`#C85A17`).
+- **Pe fundal întunecat sau negru pur (`On-Dark` — `#0B0F17` / `#000000`)**: Polaritatea se inversează automat — Disc Alb-Titan (`#F8FAFC`), monogramă **N** Slate Închis (`#0F172A`), aripă Cupru Aprins (`#EA580C`) și wordmark alb.
+- **În regim static universal (`Universal Contrast Ring`)**: Include un inel exterior de gardă din cupru (`#C85A17`, $r=108$) și corpul literei **N** plin (`#F4EFE6`), garantând vizibilitate 100% atât pe alb, cât și pe negru sau peste fotografii.
 
 ---
 
 ## 🛠️ Tehnologii & Standarde de Calitate
 
 - **HTML5 Semantic & Nativ**: `<dialog>` nativ cu gestionare completă a focusului, `aria-live`, tabele de coordonate și diagrame vectoriale SVG dinamice.
-- **CSS Modern (OKLCH & Fluid Typography)**: 81 variabile CSS, temă duală cu persistență în `localStorage`, `clamp()` tipografic (`Instrument Serif`, `Plus Jakarta Sans`, `JetBrains Mono`), *spotlight cards* și suport complet `prefers-reduced-motion`.
-- **Zero Dependențe Externe JS**: Vanilla JavaScript modular, fără framework-uri grele, scor **100/100 (Grade A+)** la auditul de performanță, accesibilitate și prevenire CLS (`width`/`height` explicite pe toate imaginile).
+- **CSS Modern (OKLCH & Fluid Typography)**: 89 variabile CSS, temă duală cu persistență în `localStorage`, `clamp()` tipografic (`Instrument Serif`, `Plus Jakarta Sans`, `JetBrains Mono`), *spotlight cards* și suport complet `prefers-reduced-motion`.
+- **Zero Dependențe Externe JS**: Vanilla JavaScript modular, fără framework-uri grele, scor **100/100 (Grade A+)** la auditul de performanță, accesibilitate și prevenire CLS (`width`/`height` explicite pe toate imaginile), plus scor **100/100** la `svg_audit.py` pe toate fișierele logo.
 
 ---
 
