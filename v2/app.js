@@ -1125,21 +1125,54 @@
   renderGlossary('');
 
   /* ==========================================================================
-     12. ENROLLMENT FORM VALIDATION & INSTANT FEEDBACK
+     12. ENROLLMENT FORM — REAL EMAIL, WHATSAPP SHARE, TICKET DOWNLOAD & DRAFT
      ========================================================================== */
   const enrollmentForm = document.getElementById('enrollment-form');
   const formFeedback = document.getElementById('form-feedback');
+  const nameInput = document.getElementById('form-name');
+  const contactInput = document.getElementById('form-contact');
+  const stageSelect = document.getElementById('form-stage');
+  const branchSelect = document.getElementById('form-branch');
+  const msgInput = document.getElementById('form-message');
+
+  // Restore saved draft from localStorage
+  try {
+    const savedDraft = JSON.parse(localStorage.getItem('nova-enrollment-draft') || 'null');
+    if (savedDraft) {
+      if (nameInput && savedDraft.name) nameInput.value = savedDraft.name;
+      if (contactInput && savedDraft.contact) contactInput.value = savedDraft.contact;
+      if (stageSelect && savedDraft.stage) stageSelect.value = savedDraft.stage;
+      if (branchSelect && savedDraft.branch) branchSelect.value = savedDraft.branch;
+      if (msgInput && savedDraft.message) msgInput.value = savedDraft.message;
+    }
+  } catch (_) {}
+
+  [nameInput, contactInput, stageSelect, branchSelect, msgInput].forEach((el) => {
+    if (!el) return;
+    el.addEventListener('input', () => {
+      try {
+        localStorage.setItem(
+          'nova-enrollment-draft',
+          JSON.stringify({
+            name: nameInput?.value || '',
+            contact: contactInput?.value || '',
+            stage: stageSelect?.value || 'B1-B3',
+            branch: branchSelect?.value || 'aeromodelism',
+            message: msgInput?.value || ''
+          })
+        );
+      } catch (_) {}
+    });
+  });
 
   if (enrollmentForm && formFeedback) {
     enrollmentForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const nameInput = document.getElementById('form-name');
-      const contactInput = document.getElementById('form-contact');
-      const stageSelect = document.getElementById('form-stage');
-
       const name = nameInput?.value.trim() || '';
       const contact = contactInput?.value.trim() || '';
       const stage = stageSelect?.value || 'B1-B3';
+      const branch = branchSelect?.value || 'aeromodelism';
+      const message = msgInput?.value.trim() || 'Fără mențiuni suplimentare';
 
       if (!name || !contact) {
         formFeedback.className = 'form-feedback is-visible';
@@ -1150,12 +1183,507 @@
         return;
       }
 
+      const regCode = `NTM-2026-${Math.floor(1000 + Math.random() * 9000)}`;
+      const dateStr = new Date().toLocaleDateString('ro-RO');
+      const ticketText = [
+        `FIȘĂ DE ÎNSCRIERE — NOVA TECH MODELS · ATELIER CORNEL NISTOR`,
+        `Cod Înregistrare: ${regCode} | Data: ${dateStr}`,
+        `------------------------------------------------------------`,
+        `Cursant / Solicitant: ${name}`,
+        `Contact: ${contact}`,
+        `Treapta Vizată: ${stage}`,
+        `Disciplina Principală: ${branch.toUpperCase()}`,
+        `Detalii / Planșe solicitate: ${message}`,
+        `------------------------------------------------------------`,
+        `Coordonator Tehnic: Maestrul Cornel Nistor (contact@novatechmodels.ro)`
+      ].join('\n');
+
+      const mailSubject = encodeURIComponent(`[Înscriere Atelier ${regCode}] ${name} — Grupa ${stage}`);
+      const mailBody = encodeURIComponent(ticketText);
+      const waText = encodeURIComponent(ticketText);
+
       formFeedback.className = 'form-feedback is-visible';
       formFeedback.style.borderColor = 'var(--status-ok)';
-      formFeedback.style.color = 'var(--status-ok)';
+      formFeedback.style.color = 'var(--text-primary)';
       formFeedback.style.background = 'var(--status-ok-bg)';
-      formFeedback.textContent = `Înregistrare confirmată pentru ${name} (Grupa ${stage}). Maestrul Cornel Nistor va pregăti fișa de parcurs și planșele 1:1 aferente treptei selectate!`;
-      enrollmentForm.reset();
+      formFeedback.innerHTML = `
+        <div style="font-weight:700;color:var(--status-ok);margin-bottom:0.35rem;">
+          ✓ Fișa de înscriere <code>${regCode}</code> a fost generată pentru ${name} (Grupa ${stage})!
+        </div>
+        <div style="font-size:var(--text-xs);color:var(--text-secondary);">
+          Alege modalitatea prin care dorești să transmiți sau să salvezi imediat fișa oficială:
+        </div>
+        <div class="form-ticket-actions">
+          <a href="mailto:contact@novatechmodels.ro?subject=${mailSubject}&body=${mailBody}" class="btn btn--primary" style="min-height:2.2rem;padding:0.35rem 0.85rem;font-size:var(--text-xs);">
+            ✉️ Trimite pe Email
+          </a>
+          <a href="https://wa.me/?text=${waText}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary" style="min-height:2.2rem;padding:0.35rem 0.85rem;font-size:var(--text-xs);">
+            💬 Trimite pe WhatsApp
+          </a>
+          <button type="button" id="btn-download-ticket" class="btn btn--secondary" style="min-height:2.2rem;padding:0.35rem 0.85rem;font-size:var(--text-xs);">
+            ⬇ Descarcă Fișa (.txt)
+          </button>
+          <button type="button" id="btn-copy-ticket" class="btn btn--secondary" style="min-height:2.2rem;padding:0.35rem 0.85rem;font-size:var(--text-xs);">
+            📋 Copiază Tichetul
+          </button>
+        </div>
+      `;
+
+      document.getElementById('btn-download-ticket')?.addEventListener('click', () => {
+        const blob = new Blob([ticketText], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Fisa-Inscriere-${regCode}.txt`;
+        a.click();
+        URL.revokeObjectURL(url);
+      });
+
+      document.getElementById('btn-copy-ticket')?.addEventListener('click', (ev) => {
+        navigator.clipboard?.writeText(ticketText);
+        ev.currentTarget.textContent = '✓ Tichet Copiat!';
+      });
+    });
+  }
+
+  /* ==========================================================================
+     13. PRINTABLE A4 FAI TECHNICAL BULLETIN & LAB DEEP-LINK SHARE
+     ========================================================================== */
+  const btnPrintLab = document.getElementById('btn-print-lab');
+  const btnShareLab = document.getElementById('btn-share-lab');
+  const printableFaiSheet = document.getElementById('printable-fai-sheet');
+
+  function buildPrintableFaiBulletin() {
+    if (!printableFaiSheet) return;
+    const dateNow = new Date().toLocaleDateString('ro-RO');
+    const calibers = document.getElementById('rock-res-calibers')?.textContent || '1,88 cal.';
+    const diffMm = document.getElementById('rock-res-diff')?.textContent || '+75 mm';
+    const altM = document.getElementById('rock-res-alt')?.textContent || '192,0 m';
+    const motorClass = document.getElementById('rock-res-class')?.textContent || 'Clasa B/C';
+    const s7Static = document.getElementById('s7-res-static')?.textContent || '368 / 400 p';
+    const s7Flight = document.getElementById('s7-res-flight')?.textContent || '92 / 100 p';
+    const s7Total = document.getElementById('s7-res-total')?.textContent || '460 / 500 p';
+    const s7Rank = document.getElementById('s7-res-rank')?.textContent || 'Lot Național';
+    const aeroArea = document.getElementById('aero-res-area')?.textContent || '11,16 dm²';
+    const aeroLoad = document.getElementById('aero-res-load')?.textContent || '12,5 g/dm²';
+    const aeroShim = document.getElementById('aero-res-shim')?.textContent || '4,40 mm';
+
+    printableFaiSheet.innerHTML = `
+      <div style="display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #0f172a;padding-bottom:14px;margin-bottom:18px;">
+        <div>
+          <div style="font-family:monospace;font-size:11px;text-transform:uppercase;letter-spacing:0.12em;color:#c85a17;font-weight:700;">
+            NOVA TECH MODELS · ATELIERUL DE MODELISM TEHNIC CORNEL NISTOR
+          </div>
+          <h2 style="margin:4px 0 0;font-size:22px;">Buletin Oficial de Verificare Tehnică &amp; Jurizare FAI Clasa S7</h2>
+        </div>
+        <div style="text-align:right;font-family:monospace;font-size:11px;">
+          <div>Data: <strong>${dateNow}</strong></div>
+          <div>Standard: <strong>FAI Sporting Code Section 4 (S7)</strong></div>
+        </div>
+      </div>
+
+      <h3 style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;border-bottom:1px solid #cbd5e1;padding-bottom:4px;">
+        1. Stabilitate Balistică Barrowman &amp; Telemetrie Dublu-Teodolit
+      </h3>
+      <table style="width:100%;border-collapse:collapse;margin:10px 0 20px;font-size:12.5px;">
+        <tr>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>Diametru Calibru (d):</strong> ${rockDia?.value || 40} mm</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>Poziție CG / CP:</strong> ${rockCg?.value || 310} mm / ${rockCp?.value || 385} mm</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>Rezervă Statică:</strong> ${calibers} (${diffMm})</td>
+        </tr>
+        <tr>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>Bază Teodolite (b):</strong> ${rockBase?.value || 300} m</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>Altitudine Apogeu (H):</strong> ${altM}</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>Clasă Motor:</strong> ${motorClass}</td>
+        </tr>
+      </table>
+
+      <h3 style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;border-bottom:1px solid #cbd5e1;padding-bottom:4px;">
+        2. Fișă Oficială de Jurizare FAI Clasa S7 — Machete de Rachete Cosmice (Max 500p)
+      </h3>
+      <table style="width:100%;border-collapse:collapse;margin:10px 0 20px;font-size:12.5px;">
+        <tr>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>1. Documentație Tehnică:</strong> ${s7Doc?.value || 46} / 50 p</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>2. Exactitatea Scării (Șubler):</strong> ${s7Dim?.value || 138} / 150 p</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>3. Complexitate &amp; Execuție:</strong> ${s7Craft?.value || 110} / 120 p</td>
+        </tr>
+        <tr>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>4. Autenticitate Cromatică:</strong> ${s7Color?.value || 74} / 80 p</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>Total Stand (Prag min. 100p):</strong> ${s7Static}</td>
+          <td style="padding:7px;border:1px solid #cbd5e1;"><strong>5. Zbor &amp; Recuperare:</strong> ${s7Flight}</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="padding:8px;border:1px solid #0f172a;background:#f8fafc;"><strong>SCOR TOTAL OFICIAL FAI CLASA S7: ${s7Total}</strong></td>
+          <td style="padding:8px;border:1px solid #0f172a;background:#f8fafc;"><strong>Încadrare: ${s7Rank}</strong></td>
+        </tr>
+      </table>
+
+      <h3 style="font-size:14px;text-transform:uppercase;letter-spacing:0.06em;border-bottom:1px solid #cbd5e1;padding-bottom:4px;">
+        3. Parametri Aerodinamici &amp; Calaj Aripă Portantă
+      </h3>
+      <p style="font-size:12.5px;margin:8px 0 24px;">
+        Anvergură: <strong>${aeroSpan?.value || 930} mm</strong> · Coardă: <strong>${aeroChord?.value || 120} mm</strong> · Suprafață: <strong>${aeroArea}</strong> · Încărcare alară: <strong>${aeroLoad}</strong> · Adaous calaj ($X = C \\cdot \\sin\\alpha$): <strong>${aeroShim}</strong>.
+      </p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;margin-top:36px;padding-top:16px;border-top:1px dashed #94a3b8;font-size:12px;">
+        <div><strong>Coordonator Atelier:</strong><br><br>Maestrul Cornel Nistor</div>
+        <div><strong>Arbitru Verificator FAI:</strong><br><br>_______________________</div>
+        <div><strong>Semnătură Concurent:</strong><br><br>_______________________</div>
+      </div>
+    `;
+  }
+
+  if (btnPrintLab) {
+    btnPrintLab.addEventListener('click', () => {
+      buildPrintableFaiBulletin();
+      document.body.classList.add('print-fai-mode');
+      window.print();
+      setTimeout(() => {
+        document.body.classList.remove('print-fai-mode');
+      }, 500);
+    });
+  }
+
+  if (btnShareLab) {
+    btnShareLab.addEventListener('click', () => {
+      const url = new URL(window.location.href);
+      url.searchParams.set('dia', rockDia?.value || '40');
+      url.searchParams.set('cg', rockCg?.value || '310');
+      url.searchParams.set('cp', rockCp?.value || '385');
+      url.searchParams.set('s7doc', s7Doc?.value || '46');
+      url.searchParams.set('s7dim', s7Dim?.value || '138');
+      url.searchParams.set('s7craft', s7Craft?.value || '110');
+      url.searchParams.set('s7color', s7Color?.value || '74');
+      url.searchParams.set('s7flight', s7Flight?.value || '92');
+      url.hash = '#laborator';
+      window.history.replaceState({}, '', url.toString());
+      navigator.clipboard?.writeText(url.toString());
+      const orig = btnShareLab.textContent;
+      btnShareLab.textContent = '✓ Link Configurație Copiat!';
+      setTimeout(() => {
+        btnShareLab.textContent = orig;
+      }, 2200);
+    });
+  }
+
+  /* ==========================================================================
+     14. DEEP-LINKING IN URL (?plansa=, ?volum=, ?etapa=) & LIGHTBOX PRINT/SHARE
+     ========================================================================== */
+  const lightboxShareBtn = document.getElementById('lightbox-share');
+  const lightboxPrintBtn = document.getElementById('lightbox-print');
+  const allLightboxTriggers = Array.from(document.querySelectorAll('[data-lightbox-src]'));
+
+  function slugify(str) {
+    return (str || '')
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '');
+  }
+
+  allLightboxTriggers.forEach((trigger, idx) => {
+    const title = trigger.getAttribute('data-lightbox-title') || `plansa-${idx + 1}`;
+    trigger.setAttribute('data-lightbox-slug', slugify(title));
+    trigger.addEventListener('click', () => {
+      const url = new URL(window.location.href);
+      url.searchParams.set('plansa', slugify(title));
+      window.history.replaceState({}, '', url.toString());
+    });
+  });
+
+  if (lightboxShareBtn) {
+    lightboxShareBtn.addEventListener('click', () => {
+      const currentTitle = document.getElementById('lightbox-title')?.textContent || '';
+      const url = new URL(window.location.href);
+      url.searchParams.set('plansa', slugify(currentTitle));
+      window.history.replaceState({}, '', url.toString());
+      navigator.clipboard?.writeText(url.toString());
+      const orig = lightboxShareBtn.textContent;
+      lightboxShareBtn.textContent = '✓ Link Planșă Copiat!';
+      setTimeout(() => {
+        lightboxShareBtn.textContent = orig;
+      }, 2000);
+    });
+  }
+
+  if (lightboxPrintBtn) {
+    lightboxPrintBtn.addEventListener('click', () => {
+      const imgSrc = document.getElementById('lightbox-img')?.getAttribute('src');
+      const title = document.getElementById('lightbox-title')?.textContent || 'Planșă 1:1';
+      if (!imgSrc) return;
+      const w = window.open('', '_blank');
+      if (w) {
+        w.document.write(
+          `<!doctype html><html lang="ro"><head><title>${title} — Tipărire 1:1</title><style>body{margin:0;display:flex;flex-direction:column;align-items:center;font-family:monospace;padding:12px}img{max-width:100%;height:auto;border:1px solid #000}@media print{.no-print{display:none}}</style></head><body><div class="no-print" style="margin-bottom:10px"><strong>${title}</strong> — <button onclick="window.print()">🖨️ Tipărește la Scară 1:1</button></div><img src="${imgSrc}" alt="${title}" onload="setTimeout(()=>window.print(),300)"></body></html>`
+        );
+        w.document.close();
+      }
+    });
+  }
+
+  // Restore deep-linked state on page load
+  (function restoreDeepLinks() {
+    const params = new URLSearchParams(window.location.search);
+    const plansaSlug = params.get('plansa');
+    if (plansaSlug) {
+      const match = allLightboxTriggers.find(
+        (t) => t.getAttribute('data-lightbox-slug') === plansaSlug || t.getAttribute('data-lightbox-slug')?.includes(plansaSlug)
+      );
+      if (match) {
+        setTimeout(() => match.click(), 250);
+      }
+    }
+
+    const volParam = params.get('volum');
+    const capParam = Number(params.get('cap') || 0);
+    if (volParam && COURSE_VOLUMES[volParam]) {
+      const volBtn = document.querySelector(`[data-vol-select="${volParam}"]`);
+      if (volBtn) volBtn.click();
+      setTimeout(() => renderChapterContent(volParam, capParam), 100);
+    }
+
+    if (params.has('dia') && rockDia) {
+      rockDia.value = params.get('dia');
+      if (params.has('cg') && rockCg) rockCg.value = params.get('cg');
+      if (params.has('cp') && rockCp) rockCp.value = params.get('cp');
+      updateRocketLab();
+    }
+    if (params.has('s7doc') && s7Doc) {
+      s7Doc.value = params.get('s7doc');
+      if (params.has('s7dim') && s7Dim) s7Dim.value = params.get('s7dim');
+      if (params.has('s7craft') && s7Craft) s7Craft.value = params.get('s7craft');
+      if (params.has('s7color') && s7Color) s7Color.value = params.get('s7color');
+      if (params.has('s7flight') && s7Flight) s7Flight.value = params.get('s7flight');
+      updateS7Lab();
+    }
+  })();
+
+  /* ==========================================================================
+     15. GLOBAL COMMAND PALETTE (CTRL+K) ACROSS ALL SECTIONS
+     ========================================================================== */
+  const cmdDialog = document.getElementById('cmd-dialog');
+  const cmdTrigger = document.getElementById('cmd-palette-trigger');
+  const cmdClose = document.getElementById('cmd-close');
+  const cmdInput = document.getElementById('cmd-input');
+  const cmdResults = document.getElementById('cmd-results');
+  const cmdFilterPills = document.querySelectorAll('[data-cmd-cat]');
+  let activeCmdCat = 'all';
+  let searchIndex = [];
+
+  function buildSearchIndex() {
+    const items = [];
+    // 1. Blueprints 1:1
+    document.querySelectorAll('#plansoteca .blueprint-card').forEach((card) => {
+      const title = card.querySelector('.blueprint-title')?.textContent?.trim() || '';
+      const sub = card.querySelector('.blueprint-desc')?.textContent?.trim() || '';
+      const trigger = card.querySelector('[data-lightbox-src]');
+      if (title) {
+        items.push({
+          cat: 'planse',
+          badge: 'Planșă 1:1',
+          title,
+          sub,
+          action: () => {
+            if (trigger) trigger.click();
+            else card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      }
+    });
+
+    // 2. 12 Qualification Steps (B1-P3)
+    document.querySelectorAll('.step-card').forEach((card) => {
+      const code = card.querySelector('.step-code')?.textContent?.trim() || '';
+      const title = card.querySelector('.step-name')?.textContent?.trim() || '';
+      const sub = card.querySelector('.step-desc')?.textContent?.trim() || '';
+      if (title) {
+        items.push({
+          cat: 'trepte',
+          badge: code || 'Treaptă',
+          title: `${code} · ${title}`,
+          sub,
+          action: () => {
+            const stagePanel = card.closest('.stage-panel');
+            if (stagePanel) {
+              const stageId = stagePanel.id.replace('stage-', '');
+              document.querySelector(`[data-stage-tab="${stageId}"]`)?.click();
+            }
+            card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        });
+      }
+    });
+
+    // 3. 3 Course Volumes & Chapters
+    Object.entries(COURSE_VOLUMES).forEach(([volKey, vol]) => {
+      vol.chapters.forEach((ch, idx) => {
+        items.push({
+          cat: 'curs',
+          badge: ch.badge,
+          title: ch.title,
+          sub: `${ch.pages} — ${ch.step}`,
+          action: () => {
+            document.querySelector(`[data-vol-select="${volKey}"]`)?.click();
+            renderChapterContent(volKey, idx);
+            document.getElementById('tratate')?.scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
+    });
+
+    // 4. Glossary & Simulators
+    GLOSSARY_TERMS.forEach((g) => {
+      items.push({
+        cat: 'glosar',
+        badge: `Glosar · ${g.cat}`,
+        title: g.term,
+        sub: g.def,
+        action: () => {
+          if (glossarySearch) {
+            glossarySearch.value = g.term;
+            renderGlossary(g.term);
+            glossarySearch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }
+      });
+    });
+
+    return items;
+  }
+
+  function renderCmdResults() {
+    if (!cmdResults) return;
+    if (searchIndex.length === 0) searchIndex = buildSearchIndex();
+    const q = (cmdInput?.value || '').trim().toLowerCase();
+    const filtered = searchIndex.filter((it) => {
+      const matchCat = activeCmdCat === 'all' || it.cat === activeCmdCat;
+      const matchQ =
+        !q ||
+        it.title.toLowerCase().includes(q) ||
+        it.sub.toLowerCase().includes(q) ||
+        it.badge.toLowerCase().includes(q);
+      return matchCat && matchQ;
+    });
+
+    const countEl = document.getElementById('cmd-count');
+    if (countEl) countEl.textContent = `${filtered.length} rezultate găsite`;
+
+    if (filtered.length === 0) {
+      cmdResults.innerHTML = `<div style="padding:1.5rem;text-align:center;color:var(--text-muted);font-size:var(--text-xs);">Niciun rezultat pentru „${cmdInput?.value}”. Încearcă: Ariane, Fokker, B1, S7, Barrowman, diedru.</div>`;
+      return;
+    }
+
+    cmdResults.innerHTML = filtered
+      .slice(0, 24)
+      .map(
+        (it, i) => `
+        <button type="button" class="cmd-item ${i === 0 ? 'is-selected' : ''}" data-cmd-idx="${i}">
+          <div>
+            <span class="cmd-item-title">${it.title}</span>
+            <span class="cmd-item-sub">${it.sub.slice(0, 110)}${it.sub.length > 110 ? '…' : ''}</span>
+          </div>
+          <span class="cmd-item-badge">${it.badge}</span>
+        </button>
+      `
+      )
+      .join('');
+
+    cmdResults.querySelectorAll('.cmd-item').forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        cmdDialog?.close();
+        filtered[i]?.action();
+      });
+    });
+  }
+
+  function openCmdPalette() {
+    if (!cmdDialog) return;
+    renderCmdResults();
+    if (typeof cmdDialog.showModal === 'function') cmdDialog.showModal();
+    else cmdDialog.setAttribute('open', '');
+    setTimeout(() => cmdInput?.focus(), 50);
+  }
+
+  if (cmdTrigger) cmdTrigger.addEventListener('click', openCmdPalette);
+  if (cmdClose) cmdClose.addEventListener('click', () => cmdDialog?.close());
+  if (cmdDialog) {
+    cmdDialog.addEventListener('click', (e) => {
+      if (e.target === cmdDialog) cmdDialog.close();
+    });
+  }
+  if (cmdInput) cmdInput.addEventListener('input', renderCmdResults);
+
+  cmdFilterPills.forEach((pill) => {
+    pill.addEventListener('click', () => {
+      activeCmdCat = pill.getAttribute('data-cmd-cat') || 'all';
+      cmdFilterPills.forEach((p) => p.classList.toggle('is-active', p === pill));
+      renderCmdResults();
+    });
+  });
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+      e.preventDefault();
+      if (cmdDialog?.open) cmdDialog.close();
+      else openCmdPalette();
+    }
+  });
+
+  /* ==========================================================================
+     16. BILINGUAL RO / EN LANGUAGE TOGGLE
+     ========================================================================== */
+  const langToggle = document.getElementById('lang-toggle');
+  const langLabel = document.getElementById('lang-label');
+  const I18N_DICT = {
+    ro: {
+      'nav.filozofie': '01. Filozofie & X-Ray',
+      'nav.programa': '02. Matricea B1–P3',
+      'nav.plansoteca': '03. Planșoteca 1:1',
+      'nav.galerie': '04. Expoziție FAI',
+      'nav.laborator': '05. Laborator Calcule',
+      'nav.tratate': '06. Curs 1.017 Pagini',
+      'nav.inscriere': '07. Înscriere',
+      'header.search': 'Caută'
+    },
+    en: {
+      'nav.filozofie': '01. Philosophy & X-Ray',
+      'nav.programa': '02. B1–P3 Matrix',
+      'nav.plansoteca': '03. 1:1 Blueprints',
+      'nav.galerie': '04. FAI Exhibition',
+      'nav.laborator': '05. Flight & S7 Lab',
+      'nav.tratate': '06. 1,017p Treatise',
+      'nav.inscriere': '07. Enrollment',
+      'header.search': 'Search'
+    }
+  };
+
+  let currentLang = localStorage.getItem('nova-lang') || 'ro';
+  function applyLang(lang) {
+    currentLang = lang === 'en' ? 'en' : 'ro';
+    localStorage.setItem('nova-lang', currentLang);
+    document.documentElement.setAttribute('lang', currentLang);
+    if (langLabel) langLabel.textContent = currentLang.toUpperCase();
+    const dict = I18N_DICT[currentLang];
+    document.querySelectorAll('[data-i18n]').forEach((el) => {
+      const key = el.getAttribute('data-i18n');
+      if (key && dict[key]) el.textContent = dict[key];
+    });
+  }
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      applyLang(currentLang === 'ro' ? 'en' : 'ro');
+    });
+  }
+  applyLang(currentLang);
+
+  /* ==========================================================================
+     17. OFFLINE PWA SERVICE WORKER REGISTRATION (AIRFIELD OFFLINE MODE)
+     ========================================================================== */
+  if ('serviceWorker' in navigator && (window.location.protocol === 'https:' || window.location.hostname === 'localhost')) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
     });
   }
 })();
+

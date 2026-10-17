@@ -1,24 +1,29 @@
 {
-  "name": "NOVA Tech Models \u2014 Vernier Monogram",
+  "name": "NOVA Tech Models · Atelier Cornel Nistor (V2)",
+  "short_name": "NOVA Atelier",
+  "description": "Atelierul de Aeromodelism, Rachetomodele FAI S7, Planșotecă 1:1 și Laborator Aerodinamic/Barrowman Offline-Ready.",
+  "start_url": "../../index.html",
+  "scope": "../../",
+  "display": "standalone",
+  "background_color": "#FAF7F2",
+  "theme_color": "#C85A17",
+  "lang": "ro-RO",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
+      "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/maskable-512.png",
+      "src": "maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
     }
-  ],
-  "theme_color": "#0F172A",
-  "background_color": "#0F172A",
-  "display": "standalone"
+  ]
 }

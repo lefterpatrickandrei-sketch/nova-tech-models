@@ -110,6 +110,44 @@
             }
           ]
         }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://lefterpatrickandrei-sketch.github.io/nova-tech-models/v2/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Cum se structurează cele 4 etape și 12 trepte de calificare (B1–P3) în atelier?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Programa este împărțită în 4 etape a câte 3 trepte: Basic (B1–B3: planoare din carton și deprinderi de tăiere/aliniere), Mediu (M1–M3: structuri portante cu nervuri din balsa și propulsie cu cauciuc), Specialist (S1–S3: machete de aviație WWI/WWII și debitare CNC) și Profesionist (P1–P3: rachetomodele la scară clasa FAI S7 și lot național)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Care este pragul minim de punctaj pentru admiterea la zbor în clasa FAI S7 (Machete de rachete)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Conform regulamentului FAI (Vol. III, pag. 210), evaluarea la stand acordă maximum 400 de puncte (50p documentație + 350p execuție și precizia scării). Macheta trebuie să obțină minimum 100 de puncte la stand pentru a fi admisă la proba oficială de zbor (maximum 100p, total 500p)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Cum se utilizează planșele 1:1 din Planșotecă pentru construcția la banc?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Planșele din secțiunea Planșotecă pot fi deschise în inspectorul optic 1:1, partajate prin link direct (?plansa=...) sau tipărite la scară pe hârtie ori calc, peste care se așază folie transparentă de polietilenă pentru asamblarea fuselajului și a semiaripilor fără lipirea pieselor de desen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pot fi folosite calculatoarele Barrowman și de triangulație cu teodolitul offline, pe terenul de zbor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da. Platforma V2 include un Service Worker PWA (sw.js) care salvează în memoria locală a telefonului sau laptopului toate cele 3 simulatoare, glosarul și planșele inspectate, permițând calculul centrului de presiune și al altitudinii de apogeu chiar și pe poligoane fără semnal GSM."
+            }
+          }
+        ]
       }
     ]
   }
@@ -145,16 +183,24 @@
       </a>
 
       <nav class="primary-nav" aria-label="Navigare principală">
-        <a href="#filozofie" class="nav-link">01. Filozofie &amp; X-Ray</a>
-        <a href="#programa" class="nav-link">02. Matricea B1–P3</a>
-        <a href="#plansoteca" class="nav-link">03. Planșoteca 1:1</a>
-        <a href="#galerie" class="nav-link">04. Expoziție FAI</a>
-        <a href="#laborator" class="nav-link">05. Laborator Calcule</a>
-        <a href="#tratate" class="nav-link">06. Curs 1.017 Pagini</a>
-        <a href="#inscriere" class="nav-link">07. Înscriere</a>
+        <a href="#filozofie" class="nav-link" data-i18n="nav.filozofie">01. Filozofie &amp; X-Ray</a>
+        <a href="#programa" class="nav-link" data-i18n="nav.programa">02. Matricea B1–P3</a>
+        <a href="#plansoteca" class="nav-link" data-i18n="nav.plansoteca">03. Planșoteca 1:1</a>
+        <a href="#galerie" class="nav-link" data-i18n="nav.galerie">04. Expoziție FAI</a>
+        <a href="#laborator" class="nav-link" data-i18n="nav.laborator">05. Laborator Calcule</a>
+        <a href="#tratate" class="nav-link" data-i18n="nav.tratate">06. Curs 1.017 Pagini</a>
+        <a href="#inscriere" class="nav-link" data-i18n="nav.inscriere">07. Înscriere</a>
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="icon-btn" id="cmd-palette-trigger" aria-label="Căutare rapidă în tot atelierul (Ctrl+K)" title="Căutare rapidă în planșe, trepte, curs și glosar (Ctrl+K)">
+          <span aria-hidden="true">⌕</span>
+          <span data-i18n="header.search">Caută</span>
+          <kbd class="kbd-hint">Ctrl+K</kbd>
+        </button>
+        <button type="button" class="icon-btn" id="lang-toggle" aria-label="Comută limba Română sau Engleză" title="Switch language RO / EN">
+          <span id="lang-label">RO</span>
+        </button>
         <button type="button" class="icon-btn" id="theme-toggle" aria-label="Comută tema luminoasă sau întunecată" title="Comută modul de afișare">
           <span id="theme-icon" aria-hidden="true">◐</span>
           <span id="theme-label">Hangar Dark</span>
@@ -2085,6 +2131,27 @@
             </div>
           </div>
         </div>
+
+        <!-- Lab Export, Print PDF & Deep-Link Toolbar -->
+        <div class="lab-export-bar" data-reveal>
+          <div>
+            <span class="badge badge--copper">Buletin Oficial de Verificare Tehnică &amp; Telemetrie</span>
+            <p style="font-size: var(--text-xs); color: var(--text-secondary); margin-top: 0.25rem;">
+              Generează fișa printabilă A4 (PDF) cu parametrii aerodinamici, stabilitatea Barrowman ($CP/CG$) și grila de jurizare FAI S7 sau copiază link-ul direct cu valorile configurate.
+            </p>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.65rem; align-items: center;">
+            <button type="button" class="btn btn--secondary" id="btn-share-lab" style="min-height: 2.5rem; padding: 0.5rem 1rem; font-size: var(--text-xs);">
+              🔗 Copiază Link Configurație
+            </button>
+            <button type="button" class="btn btn--primary" id="btn-print-lab" style="min-height: 2.5rem; padding: 0.5rem 1.1rem; font-size: var(--text-xs);">
+              🖨️ Tipărește / Exportă Buletin FAI (PDF)
+            </button>
+          </div>
+        </div>
+
+        <!-- Printable Official FAI Technical Bulletin (Visible on @media print) -->
+        <div class="printable-fai-sheet" id="printable-fai-sheet" aria-hidden="true"></div>
       </div>
     </section>
 
@@ -2344,6 +2411,45 @@
             <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
           </form>
         </div>
+
+        <!-- Interactive FAQ Accordion (Synchronized with Schema.org FAQPage JSON-LD) -->
+        <div class="faq-block" id="faq" data-reveal>
+          <div style="margin-bottom: 1.25rem;">
+            <span class="badge badge--copper">Întrebări Frecvente (FAQ Oficial Atelier &amp; FAI)</span>
+            <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); margin-top: 0.35rem;">
+              Ghid Rapid pentru Cursanți, Părinți și Concurenți FAI S7
+            </h3>
+          </div>
+          <div class="faq-grid">
+            <details class="faq-item" open>
+              <summary class="faq-question">Cum se structurează cele 4 etape și 12 trepte de calificare (B1–P3) în atelier?</summary>
+              <div class="faq-answer">
+                Programa este împărțită în 4 etape a câte 3 trepte: <strong>Basic (B1–B3)</strong> — planoare din carton și deprinderi de tăiere/aliniere (<em>YR-OZN, YR-Delta, YR-Șoim, Felix 5</em>); <strong>Mediu (M1–M3)</strong> — structuri portante cu nervuri din balsa și propulsie cu motor de cauciuc (<em>YR-5 Ciocîrlia, Planor Faza II</em>); <strong>Specialist (S1–S3)</strong> — machete de aviație WWI/WWII și debitare CNC (<em>Sopwith Camel, Fokker D.VII</em>); <strong>Profesionist (P1–P3)</strong> — rachetomodele la scară clasa FAI S7 și lot național (<em>Ariane 44P, Saturn V, Soyuz</em>).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Care este pragul minim de punctaj pentru admiterea la zbor în clasa FAI S7 (Machete de rachete)?</summary>
+              <div class="faq-answer">
+                Conform regulamentului FAI (Vol. III, pag. 210), evaluarea la stand acordă maximum <strong>400 de puncte</strong> (50p documentație tehnică + 350p execuție și precizia scării verificată cu șublerul). Macheta trebuie să obțină <strong>minimum 100 de puncte la stand</strong> pentru a fi admisă la proba oficială de zbor (maximum 100p, scor total maxim 500p).
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Cum se utilizează planșele 1:1 din Planșotecă pentru construcția la banc?</summary>
+              <div class="faq-answer">
+                Planșele din secțiunea <strong>Planșotecă 1:1</strong> pot fi deschise în inspectorul optic, partajate prin link direct (<code>?plansa=...</code>) sau tipărite la scară pe hârtie ori calc, peste care se așază folie transparentă de polietilenă pentru asamblarea fuselajului și a semiaripilor fără lipirea pieselor de desen.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-question">Pot fi folosite calculatoarele Barrowman și de triangulație cu teodolitul offline, pe terenul de zbor?</summary>
+              <div class="faq-answer">
+                Da. Platforma V2 include un <strong>Service Worker PWA (<code>sw.js</code>)</strong> care salvează în memoria locală a telefonului sau laptopului toate cele 3 simulatoare, glosarul și planșele inspectate, permițând calculul centrului de presiune ($CP/CG$) și al altitudinii de apogeu chiar și pe poligoane de lansare fără semnal GSM.
+              </div>
+            </details>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -2366,10 +2472,44 @@
         <img id="lightbox-img" src="assets/img/atelier-ariane-banc-1600.webp" width="1080" height="1920" alt="Previzualizare extinsă a planșei sau modelului">
       </div>
       <div class="lightbox-bottom">
-        <p id="lightbox-caption" style="font-size: var(--text-xs); color: var(--text-secondary); max-width: 72ch;"></p>
-        <a id="lightbox-download" href="assets/img/atelier-ariane-banc-1600.webp" download class="btn btn--secondary" style="min-height: 2.35rem; padding: 0.45rem 0.95rem; font-size: var(--text-xs);">
-          ⬇ Descarcă Imaginea HD
-        </a>
+        <p id="lightbox-caption" style="font-size: var(--text-xs); color: var(--text-secondary); max-width: 68ch;"></p>
+        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center;">
+          <button type="button" id="lightbox-share" class="btn btn--secondary" style="min-height: 2.35rem; padding: 0.45rem 0.85rem; font-size: var(--text-xs);">
+            🔗 Copiază Link Planșă
+          </button>
+          <button type="button" id="lightbox-print" class="btn btn--secondary" style="min-height: 2.35rem; padding: 0.45rem 0.85rem; font-size: var(--text-xs);">
+            🖨️ Tipărește 1:1
+          </button>
+          <a id="lightbox-download" href="assets/img/atelier-ariane-banc-1600.webp" download class="btn btn--primary" style="min-height: 2.35rem; padding: 0.45rem 0.95rem; font-size: var(--text-xs);">
+            ⬇ Descarcă HD
+          </a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Global Search / Command Palette Modal (Ctrl+K) -->
+  <dialog class="cmd-dialog" id="cmd-dialog" aria-labelledby="cmd-dialog-title">
+    <div class="cmd-inner">
+      <div class="cmd-header">
+        <span id="cmd-dialog-title" class="sr-only">Căutare Rapidă în Tot Atelierul (Ctrl+K)</span>
+        <span aria-hidden="true" style="font-size: 1.1rem; color: var(--accent-copper);">⌕</span>
+        <input type="search" id="cmd-input" class="cmd-input" placeholder="Caută planșă 1:1 (ex: Fokker, Ariane, Ciocîrlia), treaptă B1–P3, capitol de curs sau termen..." autocomplete="off">
+        <button type="button" class="icon-btn" id="cmd-close" style="min-height: 2rem; padding: 0.25rem 0.6rem; font-size: 0.72rem;">
+          Esc
+        </button>
+      </div>
+      <div class="cmd-filters" role="tablist" aria-label="Filtrează rezultatele căutării">
+        <button type="button" class="cmd-filter-pill is-active" data-cmd-cat="all">Toate</button>
+        <button type="button" class="cmd-filter-pill" data-cmd-cat="planse">Planșe 1:1 (16)</button>
+        <button type="button" class="cmd-filter-pill" data-cmd-cat="trepte">Trepte B1–P3 (12)</button>
+        <button type="button" class="cmd-filter-pill" data-cmd-cat="curs">Curs 1.017p (Vol. I–III)</button>
+        <button type="button" class="cmd-filter-pill" data-cmd-cat="glosar">Glosar &amp; Simulatoare</button>
+      </div>
+      <div class="cmd-results" id="cmd-results" role="listbox" aria-label="Rezultate căutare"></div>
+      <div class="cmd-footer">
+        <span><kbd class="kbd-hint">↑↓</kbd> Navigare · <kbd class="kbd-hint">Enter</kbd> Deschide direct · <kbd class="kbd-hint">Esc</kbd> Închide</span>
+        <span id="cmd-count">Index complet activ (Offline-Ready PWA)</span>
       </div>
     </div>
   </dialog>

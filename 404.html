@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 · Coordonată în Afara Poligonului — NOVA Tech Models</title>
+  <style>
+    :root {
+      --bg: #FAF7F2;
+      --ink: #0F172A;
+      --muted: #475569;
+      --copper: #C85A17;
+      --card: #FFFFFF;
+      --border: #E2D9C8;
+      --logo-ring: #C85A17;
+      --logo-disc: #0F172A;
+      --logo-n: #F4EFE6;
+      --logo-wing: #EA580C;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0B0F17;
+        --ink: #F8FAFC;
+        --muted: #94A3B8;
+        --copper: #EA580C;
+        --card: #111827;
+        --border: #1E293B;
+        --logo-ring: #EA580C;
+        --logo-disc: #F8FAFC;
+        --logo-n: #0F172A;
+        --logo-wing: #EA580C;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    }
+    .card {
+      max-width: 560px;
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 40px 32px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    }
+    .code {
+      font-family: monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--copper);
+      font-weight: 700;
+      margin-top: 16px;
+    }
+    h1 {
+      margin: 8px 0 12px;
+      font-size: 28px;
+      line-height: 1.2;
+    }
+    p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+    a.btn {
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform 0.15s ease;
+    }
+    a.btn:hover { transform: translateY(-1px); }
+    a.primary {
+      background: var(--copper);
+      color: #fff;
+    }
+    a.secondary {
+      border: 1px solid var(--border);
+      color: var(--ink);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <svg viewBox="0 0 256 256" width="84" height="84" role="img" aria-label="NOVA Tech Models">
+      <circle cx="128" cy="128" r="108" fill="var(--logo-ring)"/>
+      <circle cx="128" cy="128" r="100" fill="var(--logo-disc)"/>
+      <path fill="var(--logo-n)" d="M72 184 V72 H104 L152 120 V72 L184 104 V184 H152 L104 136 V184 Z"/>
+      <path fill="var(--logo-wing)" d="M152 72 H184 V104 Z"/>
+    </svg>
+    <div class="code">EROARE TELEMETRICĂ 404 · ÎN AFARA Razei Teodolitului</div>
+    <h1>Planșa sau pagina căutată nu se află la această coordonată.</h1>
+    <p>
+      Modelul a ieșit din sectorul de urmărire optică. Revino în Atelierul Principal <strong>NOVA Tech Models (V2)</strong> pentru a accesa cele 12 trepte B1–P3, Planșoteca 1:1 și Laboratorul FAI S7.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="/nova-tech-models/v2/">→ Intră în Atelierul V2</a>
+      <a class="btn secondary" href="/nova-tech-models/v2/logos/">✦ Studio Logo Reactiv</a>
+      <a class="btn secondary" href="/nova-tech-models/">Arhiva V1</a>
+    </div>
+  </main>
+</body>
+</html>
