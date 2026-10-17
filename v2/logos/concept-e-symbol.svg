@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
-  <title id="title">NOVA Tech Models — Telemetry Vector symbol</title>
-  <g id="symbol">
-    <path fill="#0F172A" fill-rule="evenodd" d="M128 24 A104 104 0 1 0 232 128 H200 A72 72 0 1 1 128 56 V24 Z"/>
-    <path fill="#C85A17" d="M112 64 H192 V144 L160 112 L104 168 L88 152 L144 96 Z"/>
-  </g>
-</svg>

@@ -1,8 +1,8 @@
-<svg fill="#c85a17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784 256" width="784" height="256" role="img" aria-labelledby="title"><title>NOVA Tech Models — Lockup</title>
-  <title id="title">NOVA Tech Models — Supersonic Spire lockup</title>
+<svg fill="#c85a17" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 784 256" width="784" height="256" role="img" aria-labelledby="title"><title>NOVA Tech Models — Vernier Lockup</title>
+  <title id="title">NOVA Tech Models — Vernier Lockup (On Light)</title>
   <g id="symbol">
-    <path fill="#c85a17" fill-rule="evenodd" d="M128 20 L232 124 V180 L156 104 V196 L180 220 H76 L100 196 V104 L24 180 V124 Z M128 60 L148 80 L128 100 L108 80 Z"/>
-    <path fill="#c85a17" d="M128 116 L144 132 V236 L128 220 L112 236 V132 Z"/>
+    <path fill="#c85a17" fill-rule="evenodd" d="M128 24 A104 104 0 1 1 24 128 A104 104 0 0 1 128 24 Z M72 184 V72 H104 L152 120 V72 H184 V184 H152 L104 136 V184 Z"/>
+    <path fill="#c85a17" d="M152 72 H184 V104 Z"/>
   </g>
   <g id="wordmark" fill="#c85a17">
     <path d="M280 184 V72 H308 L364 128 V72 H392 V184 H364 L308 128 V184 Z"/>

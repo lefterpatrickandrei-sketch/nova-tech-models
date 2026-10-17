@@ -12,10 +12,12 @@
 ---
 
 <p align="center">
-  <img src="./v2/assets/logo.svg" width="440" alt="NOVA Tech Models — Logo Vectorial Geometric (Supersonic Spire)" />
+  <img src="./v2/assets/logo.svg" width="440" alt="NOVA Tech Models — Vernier Monogram (Logo Vectorial Reactiv la Fundal)" />
 </p>
 
-> 🎨 **Studio & Arhivă Logo-uri (6 Concepte SVG 100/100 + Kit Producție):** **[Deschide Studioul de Logo-uri Live (`v2/logos/`)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/v2/logos/)**
+![NOVA Tech Models — Vernier Monogram (Sistem Reactiv la Fundal Deschis / Întunecat / Universal)](./v2/logos/vernier-reactive-overview.png)
+
+> 🎨 **Studio & Simulator Interactiv de Fundal (`v2/logos/`):** **[Testează Live Reacția Logo-ului pe Alb, Negru, Hangar Dark și Cupru (`v2/logos/`)](https://lefterpatrickandrei-sketch.github.io/nova-tech-models/v2/logos/)**
 
 ![Atelierul NOVA Tech Models — Machete Ariane 44P](./v2/assets/img/atelier-detaliere-1600.webp)
 

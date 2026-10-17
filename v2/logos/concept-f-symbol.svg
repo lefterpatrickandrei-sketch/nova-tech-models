@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
-  <title id="title">NOVA Tech Models — Aerodynamic Prism symbol</title>
-  <g id="symbol">
-    <path fill="#0F172A" d="M128 24 L218 76 V180 L128 232 L38 180 V76 L68 93.3 V162.7 L128 197.3 L188 162.7 V93.3 L128 58.7 Z"/>
-    <path fill="#C85A17" d="M128 76 L173 102 V154 L128 180 L83 154 V102 Z"/>
-  </g>
-</svg>

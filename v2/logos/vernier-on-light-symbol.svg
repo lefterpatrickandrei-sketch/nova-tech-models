@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
-  <title id="title">NOVA Tech Models — Vernier Monogram symbol</title>
+  <title id="title">NOVA Tech Models — Vernier Monogram (On Light)</title>
   <g id="symbol">
     <path fill="#0F172A" fill-rule="evenodd" d="M128 24 A104 104 0 1 1 24 128 A104 104 0 0 1 128 24 Z M72 184 V72 H104 L152 120 V72 H184 V184 H152 L104 136 V184 Z"/>
+    <path fill="#F4EFE6" d="M72 184 V72 H104 L152 120 V72 L184 104 V184 H152 L104 136 V184 Z"/>
     <path fill="#C85A17" d="M152 72 H184 V104 Z"/>
   </g>
 </svg>

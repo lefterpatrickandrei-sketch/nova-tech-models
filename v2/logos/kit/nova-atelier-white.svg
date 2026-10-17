@@ -1,7 +1,9 @@
-<svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title"><title>NOVA Tech Models — Supersonic Spire</title>
-  <title id="title">NOVA Tech Models — Supersonic Spire symbol</title>
+<svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title"><title>NOVA Tech Models — Vernier Monogram</title>
+  <title id="title">NOVA Tech Models — Vernier Monogram (Universal Contrast Ring)</title>
   <g id="symbol">
-    <path fill="#ffffff" fill-rule="evenodd" d="M128 20 L232 124 V180 L156 104 V196 L180 220 H76 L100 196 V104 L24 180 V124 Z M128 60 L148 80 L128 100 L108 80 Z"/>
-    <path fill="#ffffff" d="M128 116 L144 132 V236 L128 220 L112 236 V132 Z"/>
+    <path fill="#ffffff" fill-rule="evenodd" d="M128 20 A108 108 0 1 1 20 128 A108 108 0 0 1 128 20 Z M128 28 A100 100 0 1 0 228 128 A100 100 0 0 0 128 28 Z"/>
+    <path fill="#ffffff" fill-rule="evenodd" d="M128 28 A100 100 0 1 1 28 128 A100 100 0 0 1 128 28 Z M72 184 V72 H104 L152 120 V72 H184 V184 H152 L104 136 V184 Z"/>
+    <path fill="#ffffff" d="M72 184 V72 H104 L152 120 V72 L184 104 V184 H152 L104 136 V184 Z"/>
+    <path fill="#ffffff" d="M152 72 H184 V104 Z"/>
   </g>
 </svg>
