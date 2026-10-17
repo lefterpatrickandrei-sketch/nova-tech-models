@@ -1,0 +1,2330 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelierul Cornel Nistor — Modelism Tehnic, Planșe 1:1 &amp; Curs FAI</title>
+  <meta name="description" content="Platforma tehnică și enciclopedică a Atelierului Cornel Nistor: 4 etape și 12 trepte de calificare (B1–P3), 12 planșe 1:1 descărcabile, sinteză din cele 1.017 pagini de curs (Prof. Florin G. Ursa) și simulatoare FAI S7.">
+  <meta name="author" content="Atelierul de Modelism Tehnic Cornel Nistor">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ateliere-cornel-nistor.ro/v2/">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ro_RO">
+  <meta property="og:title" content="Atelierul de Modelism Tehnic Cornel Nistor — Ediția Editorială V2">
+  <meta property="og:description" content="De la scheletul de balsa și planorul școlar la rachetomodele FAI Clasa S7 (Ariane 44P, Saturn V, Soyuz). 12 trepte B1–P3, planșotecă 1:1 și laborator aerodinamic.">
+  <meta property="og:url" content="https://ateliere-cornel-nistor.ro/v2/">
+  <meta property="og:image" content="https://ateliere-cornel-nistor.ro/v2/assets/img/atelier-ariane-banc-1600.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Atelierul de Modelism Tehnic Cornel Nistor — Ediția V2">
+  <meta name="twitter:description" content="Arhivă tehnică, 12 planșe 1:1, 3 volume de curs (1.017 pagini) și calculatoare aerodinamice/balistice FAI.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured Data JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Atelierul de Modelism Tehnic Cornel Nistor",
+    "description": "Centru de excelență în aeromodelism, rachetomodelism FAI (S3, S6, S7), navomodelism și machete statice, bazat pe programa în 4 etape și 12 trepte (B1–P3) și tratatele de curs redactate de Prof. Florin G. Ursa.",
+    "url": "https://ateliere-cornel-nistor.ro/v2/",
+    "founder": {
+      "@type": "Person",
+      "name": "Cornel Nistor"
+    },
+    "knowsAbout": [
+      "Aeromodelism",
+      "Rachetomodelism FAI S7",
+      "Navomodelism",
+      "Machete Statice",
+      "Aerodinamică Aplicată"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link skip-to-content">Sari direct la conținutul principal</a>
+
+  <!-- Reading Progress Bar -->
+  <div class="scroll-progress-track" aria-hidden="true">
+    <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Subtle Blueprint Grid Background -->
+  <div class="blueprint-backdrop" aria-hidden="true"></div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Atelier Cornel Nistor — Pagina principală">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"></path>
+            <circle cx="12" cy="12" r="2"></circle>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Atelier Cornel Nistor</span>
+          <span class="brand-sub">Modelism Tehnic &amp; Lot FAI · V2</span>
+        </span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Navigare principală">
+        <a href="#filozofie" class="nav-link">01. Filozofie &amp; X-Ray</a>
+        <a href="#programa" class="nav-link">02. Matricea B1–P3</a>
+        <a href="#plansoteca" class="nav-link">03. Planșoteca 1:1</a>
+        <a href="#galerie" class="nav-link">04. Expoziție FAI</a>
+        <a href="#laborator" class="nav-link">05. Laborator Calcule</a>
+        <a href="#tratate" class="nav-link">06. Curs 1.017 Pagini</a>
+        <a href="#inscriere" class="nav-link">07. Înscriere</a>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Comută tema luminoasă sau întunecată" title="Comută modul de afișare">
+          <span id="theme-icon" aria-hidden="true">◐</span>
+          <span id="theme-label">Hangar Dark</span>
+        </button>
+        <button type="button" class="icon-btn mobile-menu-btn" id="mobile-menu-toggle" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Deschide meniul de navigare">
+          <span>Meniu</span>
+        </button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav-drawer" id="mobile-nav-drawer" aria-label="Navigare mobilă">
+      <ul class="mobile-nav-list">
+        <li><a href="#filozofie" class="mobile-nav-link"><span>01. Filozofie Constructivă &amp; Comparator X-Ray</span><span>→</span></a></li>
+        <li><a href="#programa" class="mobile-nav-link"><span>02. Programa în 4 Etape și 12 Trepte (B1–P3)</span><span>→</span></a></li>
+        <li><a href="#plansoteca" class="mobile-nav-link"><span>03. Planșoteca Atelierului (12 Planșe 1:1)</span><span>→</span></a></li>
+        <li><a href="#galerie" class="mobile-nav-link"><span>04. Expoziția FAI &amp; Galeria Lotului (22 Exponate)</span><span>→</span></a></li>
+        <li><a href="#laborator" class="mobile-nav-link"><span>05. Laboratorul de Calcule (Aerodinamică &amp; S7)</span><span>→</span></a></li>
+        <li><a href="#tratate" class="mobile-nav-link"><span>06. Enciclopedia de Curs (1.017 Pagini + Glosar)</span><span>→</span></a></li>
+        <li><a href="#inscriere" class="mobile-nav-link"><span>07. Înscriere la Atelier &amp; Consultanță</span><span>→</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         HERO — EDITORIAL AEROSPACE ATELIER
+         ==================================================================== -->
+    <section class="hero" id="top">
+      <div class="container">
+        <div class="hero-top-meta" data-reveal>
+          <span class="hero-meta-item">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>ARHIVA TEHNICĂ INTEGRALĂ · EDIȚIA V2 AUTONOMĂ</span>
+          </span>
+          <span class="hero-meta-item">COLECȚIA CORNEL NISTOR &amp; TRATATELE PROF. FLORIN G. URSA (VOL. I–III)</span>
+          <span class="hero-meta-item">CLASE FAI: F1A · F1B · S3A · S6A · S7 MACHETE COSMICE</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy" data-reveal>
+            <p class="eyebrow">Inginerie la Scară · Aerodinamică &amp; Balistică</p>
+            <h1 class="hero-title">
+              Unde desenul tehnic devine <em>structură portantă</em>, iar rigoarea devine zbor.
+            </h1>
+            <p class="hero-description">
+              În atelierul fondat de maestrul <strong>Cornel Nistor</strong>, fiecare nervură șlefuită în pachet la 0,05&nbsp;mm, fiecare lonjeron de balsa și fiecare treaptă a lansatoarelor <strong>Ariane&nbsp;44P</strong>, <strong>Saturn&nbsp;V</strong> sau <strong>Soyuz</strong> urmează o metodologie pedagogică exactă în <strong>4&nbsp;etape și 12&nbsp;trepte (B1–P3)</strong>, fundamentată pe cele <strong>1.017&nbsp;pagini</strong> ale tratatelor de curs.
+            </p>
+
+            <div class="hero-cta-row">
+              <a href="#plansoteca" class="btn btn--primary">
+                <span>Explorează Planșoteca 1:1 (16 Planșe)</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="#tratate" class="btn btn--secondary">
+                <span>Deschide Cititorul de Curs (Vol. I–III)</span>
+              </a>
+              <a href="#laborator" class="btn btn--ghost">
+                <span>Simulatoare Aerodinamice &amp; FAI S7</span>
+              </a>
+            </div>
+
+            <div class="telemetry-strip" aria-label="Indicatori tehnici ai atelierului">
+              <div class="telemetry-card spotlight-card">
+                <div class="telemetry-value">
+                  <span data-counter="12">12</span><span class="telemetry-unit">trepte</span>
+                </div>
+                <span class="telemetry-label">Matrice curriculară B1–P3 în 4 etape progresive</span>
+              </div>
+              <div class="telemetry-card spotlight-card">
+                <div class="telemetry-value">
+                  <span data-counter="1017">1017</span><span class="telemetry-unit">pag.</span>
+                </div>
+                <span class="telemetry-label">3 volume de curs (Începători, Avansați, Performanță)</span>
+              </div>
+              <div class="telemetry-card spotlight-card">
+                <div class="telemetry-value">
+                  <span data-counter="500">500</span><span class="telemetry-unit">pct.</span>
+                </div>
+                <span class="telemetry-label">Grilă oficială FAI Clasa S7 (400p stand + 100p zbor)</span>
+              </div>
+              <div class="telemetry-card spotlight-card">
+                <div class="telemetry-value">
+                  <span>0,05</span><span class="telemetry-unit">mm</span>
+                </div>
+                <span class="telemetry-label">Toleranță la calibrarea nervurilor în pachet</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual-stack" data-reveal style="--reveal-delay: 120ms;">
+            <figure class="hero-main-frame">
+              <img
+                src="assets/img/atelier-detaliere-1600.webp"
+                srcset="assets/img/atelier-detaliere-800.webp 800w, assets/img/atelier-detaliere-1600.webp 1600w"
+                sizes="(max-width: 1024px) 95vw, 44vw"
+                width="1080"
+                height="1920"
+                style="object-position: center 42%;"
+                alt="Maestrul Cornel Nistor lucrând la detalierea machetei Ariane 44P alături de dosarul tehnic Vol. 132 și routerul CNC"
+                fetchpriority="high">
+              <figcaption class="hero-frame-caption">
+                <span><strong>Maestrul Cornel Nistor &amp; Ariane 44P</strong> · Detaliere pe banc lângă dosarul Vol. 132</span>
+                <span class="badge badge--copper">Clasa FAI S7 · Scara 1:50</span>
+              </figcaption>
+            </figure>
+
+            <div class="hero-secondary-grid">
+              <article class="hero-mini-card">
+                <img
+                  src="assets/img/fokker_d7_covered-800.webp"
+                  srcset="assets/img/fokker_d7_covered-800.webp 800w, assets/img/fokker_d7_covered-1600.webp 1600w"
+                  sizes="(max-width: 768px) 46vw, 22vw"
+                  width="800"
+                  height="463"
+                  alt="Machetă biplan Fokker D.VII F 5125/18 împânzită și vopsită în atelier"
+                  loading="lazy">
+                <div class="hero-mini-body">
+                  <div class="hero-mini-title">Fokker D.VII (F 5125/18)</div>
+                  <div class="hero-mini-sub">Schelet balsa împânzit · Treapta S2 / P1</div>
+                </div>
+              </article>
+
+              <article class="hero-mini-card">
+                <img
+                  src="assets/img/sopwith_camel_front-800.webp"
+                  srcset="assets/img/sopwith_camel_front-800.webp 800w, assets/img/sopwith_camel_front-1600.webp 1600w"
+                  sizes="(max-width: 768px) 46vw, 22vw"
+                  width="800"
+                  height="618"
+                  alt="Structură portantă din balsa a biplanului Sopwith F.1 Camel pe planșa de montaj"
+                  loading="lazy">
+                <div class="hero-mini-body">
+                  <div class="hero-mini-title">Sopwith F.1 Camel — Schelet</div>
+                  <div class="hero-mini-sub">Nervuri în pachet &amp; caban · Treapta S2</div>
+                </div>
+              </article>
+            </div>
+
+            <div class="hero-vector-banner" aria-label="Geometria profilului aerodinamic Planor F2 Pițigoiul">
+              <div>
+                <span class="badge badge--cobalt">Profil Planor F2 „Pițigoiul” · Vol. II, pag. 41</span>
+                <p style="font-size: var(--text-xs); color: var(--text-secondary); margin-top: 0.3rem;">
+                  Coarda <strong>C = 110 mm</strong> · Unghi calaj <strong>α = 3°</strong> · Centraj la <strong>30% C</strong>
+                </p>
+              </div>
+              <svg class="vector-airfoil-svg" viewBox="0 0 220 54" fill="none" aria-hidden="true">
+                <line x1="10" y1="38" x2="210" y2="38" stroke="currentColor" stroke-opacity="0.25" stroke-dasharray="3 3"></line>
+                <path class="airfoil-path-animated" d="M 12 36 C 28 12, 78 9, 208 36 C 145 33, 62 31, 12 36 Z" stroke="var(--accent-primary)" stroke-width="2" fill="var(--accent-primary-soft)"></path>
+                <circle cx="68" cy="29" r="3.5" fill="var(--accent-secondary)"></circle>
+                <text x="75" y="27" fill="currentColor" font-family="JetBrains Mono, monospace" font-size="8">CG 30%</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 01 — CONSTRUCTIVE PHILOSOPHY & INTERACTIVE X-RAY COMPARATOR
+         ==================================================================== -->
+    <section class="section" id="filozofie">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="eyebrow">01 · Filozofia Constructivă &amp; Anatomia Structurii</p>
+            <h2 class="section-title">
+              Un singur principiu ingineresc, <em>patru discipline</em> complementare.
+            </h2>
+          </div>
+          <p class="section-lead">
+            Conform structurii metodologice a atelierului, indiferent dacă modelul zboară în curent termic, este propulsat de un motor rachetă cu impuls calibrat sau navighează pe apă, construcția pornește invariabil de la <strong>citirea desenului la scară</strong>, <strong>selecția fibrei materialului</strong> și <strong>controlul centrului de greutate</strong>.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card spotlight-card" data-reveal>
+            <div>
+              <span class="pillar-index">DISCIPLINA I · AEROMODELISM</span>
+              <h3 class="pillar-title">Zbor Liber, Coardă de Cauciuc &amp; Radiocomandă</h3>
+              <p class="pillar-desc">
+                De la planoarele școlare din carton presat (<em>YR-OZN, Felix&nbsp;5, YR-5&nbsp;Ciocîrlia</em>) și planoarele Faza&nbsp;I/II (<em>Libelula, Pițigoiul</em>) până la biplanele din balsa (<em>Sopwith Camel, Fokker D.VII</em>) și planoarele de performanță F1A cu sistem de determalizare.
+              </p>
+            </div>
+            <div class="pillar-specs">
+              Coardă profil: 90–150 mm · Încărcare alară: 12–28 g/dm² · Calaj: +1,5°…+3,5°
+            </div>
+          </article>
+
+          <article class="pillar-card spotlight-card" data-reveal style="--reveal-delay: 80ms;">
+            <div>
+              <span class="pillar-index">DISCIPLINA II · RACHETOMODELISM FAI</span>
+              <h3 class="pillar-title">Clasele S3 (Parașută), S6 (Streamer) &amp; S7 (Machete)</h3>
+              <p class="pillar-desc">
+                Proiectarea corpului fuzelat, a conului ogival și a ampenajelor stabilizatoare cu rezervă statică de 1,5–2,5&nbsp;calibre, urmată de construcția machetelor cosmice la scară (<em>Ariane&nbsp;44P, Saturn&nbsp;V, Soyuz, Proton</em>) jurizate după grila FAI de 500&nbsp;puncte.
+              </p>
+            </div>
+            <div class="pillar-specs">
+              Clase impuls: A (1,26–2,5 Ns) → D (10–20 Ns) · Bază teodolite: b = 300 m
+            </div>
+          </article>
+
+          <article class="pillar-card spotlight-card" data-reveal style="--reveal-delay: 160ms;">
+            <div>
+              <span class="pillar-index">DISCIPLINA III · NAVOMODELISM</span>
+              <h3 class="pillar-title">Carena pe Cuple, Bordaj &amp; Stabilitate Hidrostatică</h3>
+              <p class="pillar-desc">
+                Trasarea liniilor de apă pe calapod, decuparea coastelor (cuplelor) și a chilei centrale, aplicarea bordajului din baghete de tei/balsa, etanșarea cu rășini și echilibrarea metacentrică a navelor istorice și a vedetelor rapide (<em>Kormoran</em>).
+              </p>
+            </div>
+            <div class="pillar-specs">
+              Metacentru pozitiv (ZM &gt; ZG) · Etanșare multistrat · Aliniere arbore port-elice
+            </div>
+          </article>
+
+          <article class="pillar-card spotlight-card" data-reveal style="--reveal-delay: 240ms;">
+            <div>
+              <span class="pillar-index">DISCIPLINA IV · MACHETE STATICE</span>
+              <h3 class="pillar-title">Documentație Istorică, Detaliere 1:1 &amp; Camuflaj</h3>
+              <p class="pillar-desc">
+                Reproducerea fidelă la scară a aeronavelor și tehnicii istorice (<em>Focke-Wulf Fw&nbsp;190&nbsp;A, Fokker Dr.I Lozenge, Junkers D-1 1918</em>), incluzând nituri, panouri de vizitare, cocarde autentice și efecte controlate de uzură pentru concurs.
+              </p>
+            </div>
+            <div class="pillar-specs">
+              Toleranță scară: ±0,5% · Dosar 3 vederi + fotografii omologate FAI
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive X-Ray Comparator -->
+        <div class="xray-showcase" data-reveal>
+          <div class="xray-header">
+            <div>
+              <span class="badge badge--copper">Inspecție Structurală Interactivă</span>
+              <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); margin-top: 0.35rem;">
+                Comparator X-Ray: De la Scheletul Geodetic la Macheta de Concurs
+              </h3>
+            </div>
+            <div class="xray-preset-tabs" role="tablist" aria-label="Selectează perechea de modele pentru comparație">
+              <button type="button" class="preset-btn is-active" data-xray-preset="fokker" role="tab" aria-selected="true">
+                1. Fokker D.VII (Schelet ↔ Împânzit)
+              </button>
+              <button type="button" class="preset-btn" data-xray-preset="camel" role="tab" aria-selected="false">
+                2. Sopwith Camel (Față ↔ Plan Superior)
+              </button>
+              <button type="button" class="preset-btn" data-xray-preset="ariane" role="tab" aria-selected="false">
+                3. Ariane 44P (Fază Albă ↔ Machetă S7)
+              </button>
+            </div>
+          </div>
+
+          <div class="xray-layout">
+            <div class="xray-stage" id="xray-stage" style="--split: 52%;">
+              <!-- Right / Base Image (After) -->
+              <img
+                id="xray-img-after"
+                class="xray-img"
+                src="assets/img/fokker_d7_front-1600.webp"
+                width="1600"
+                height="1143"
+                alt="Machetă finalizată Fokker D.VII F 5125/18 împânzită și vopsită, vedere semiprofil față">
+
+              <!-- Left / Clipped Image (Before) -->
+              <div class="xray-before-layer">
+                <img
+                  id="xray-img-before"
+                  class="xray-img"
+                  src="assets/img/fokker_d7_skeleton_front-1600.webp"
+                  width="1600"
+                  height="855"
+                  alt="Scheletul din lemn de balsa al biplanului Fokker D.VII înainte de împânzire">
+              </div>
+
+              <span class="xray-tag xray-tag--left" id="xray-label-before">FAZA I · SCHELET BALSA &amp; NERVURI</span>
+              <span class="xray-tag xray-tag--right" id="xray-label-after">FAZA II · MODEL ÎMPÂNZIT F 5125/18</span>
+
+              <div class="xray-divider" aria-hidden="true">
+                <div class="xray-knob">↔</div>
+              </div>
+
+              <label for="xray-slider" class="sr-only">Glisează pentru a compara structura internă cu macheta finalizată</label>
+              <input
+                type="range"
+                id="xray-slider"
+                class="xray-range-input"
+                min="5"
+                max="95"
+                value="52"
+                aria-label="Raport comparație vizuală între schelet și macheta finalizată">
+            </div>
+
+            <aside class="xray-details-panel" id="xray-details-panel" aria-live="polite">
+              <span class="badge badge--cobalt" id="xray-detail-badge">Treptele S2–P1 · Biplan Istoric (1918)</span>
+              <h4 class="xray-detail-title" id="xray-detail-title">Fokker D.VII (F 5125/18) — Anatomia Aripii Dublu-Plan</h4>
+              <p style="font-size: var(--text-xs); color: var(--text-secondary);" id="xray-detail-desc">
+                Structura internă folosește lonjeroane din balsa selecționată (densitate 0,11 g/cm³), nervuri profilate prin metoda „în pachet” (Vol. II, pag. 107) și montanți interplan în N. Împânzirea cu hârtie japoneză tensionată cu emaillit asigură rigiditatea torsională fără creșterea masei.
+              </p>
+              <ul class="xray-spec-list" id="xray-spec-list">
+                <li><span>Structură aripă</span><span>2 lonjeroane pin + 24 nervuri balsa 1,5 mm</span></li>
+                <li><span>Tehnologie înveliș</span><span>Hârtie japoneză 14 g/m² + 3 straturi emaillit</span></li>
+                <li><span>Marcaj istoric</span><span>Fokker D.VII (F 5125/18) · Crucea de Fier</span></li>
+                <li><span>Toleranță simetrie</span><span>±0,2 mm la încastrarea ampenajului</span></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 02 — 4 STAGES & 12 QUALIFICATION STEPS (B1–P3)
+         ==================================================================== -->
+    <section class="section section--alt" id="programa">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="eyebrow">02 · Programa Oficială din STRCTURA SITE.docx</p>
+            <h2 class="section-title">
+              Matricea de Calificare în <em>4 Grupe și 12 Trepte</em> (B1–P3).
+            </h2>
+          </div>
+          <p class="section-lead">
+            Conform arhitecturii metodologice din <strong>STRCTURA SITE.docx</strong>, parcursul elevului este structurat în patru grupe strategice — <strong>BASIC (B1–B3 · Preinițiere hârtie/carton)</strong>, <strong>MEDIU (M1–M3 · Constructor modelist / Vol. I Începători)</strong>, <strong>SPECIALIST (S1–S3 · Vol. II Avansați)</strong> și <strong>PROFESIONIST (P1–P3 · Vol. III Performanță)</strong>.
+          </p>
+        </div>
+
+        <div class="curriculum-controls" data-reveal>
+          <div class="stage-filter-bar" role="tablist" aria-label="Filtrează treptele de calificare după grupă">
+            <button type="button" class="stage-pill is-active" data-stage-filter="all" role="tab" aria-selected="true">
+              Toate cele 12 Trepte (B1–P3)
+            </button>
+            <button type="button" class="stage-pill" data-stage-filter="B" role="tab" aria-selected="false">
+              1. BASIC · Descoperire (B1–B3)
+            </button>
+            <button type="button" class="stage-pill" data-stage-filter="M" role="tab" aria-selected="false">
+              2. MEDIU · Constructor (M1–M3)
+            </button>
+            <button type="button" class="stage-pill" data-stage-filter="S" role="tab" aria-selected="false">
+              3. SPECIALIST · Avansați (S1–S3)
+            </button>
+            <button type="button" class="stage-pill" data-stage-filter="P" role="tab" aria-selected="false">
+              4. PROFESIONIST · Performanță (P1–P3)
+            </button>
+          </div>
+          <span class="badge badge--gold" id="steps-count-badge">12 trepte afișate</span>
+        </div>
+
+        <!-- 12 Official Steps Grid from STRCTURA SITE.docx -->
+        <div class="steps-grid" id="steps-grid" aria-live="polite">
+          <!-- B1 -->
+          <article class="step-card spotlight-card" data-stage="B" id="step-B1">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">B1 · EXPLORATOR</span>
+                <span class="step-stage-tag">1. BASIC · Descoperire</span>
+              </div>
+              <h3 class="step-title">Descoperirea Tipurilor de Modele, Pliere &amp; Siguranță</h3>
+              <p class="step-summary">Preinițiere practică: cunoașterea principalelor categorii de modele, reguli elementare de siguranță (NTSM) și primele exerciții pe hârtie.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Avioane origami și aripi zburătoare din hârtie realizate prin pliere simetrică</li>
+              <li>Machete statice simple și exerciții de decupare, pliere și lipire sub îndrumare</li>
+              <li>Însușirea ordinii la bancul de lucru fără reglaje tehnice complexe propriu-zise</li>
+            </ul>
+            <div class="step-footer">
+              <span>Modele: Origami, Aripi Hârtie &amp; Machete Simple</span>
+              <span>Vol. I · Cap. 1–4</span>
+            </div>
+          </article>
+
+          <!-- B2 -->
+          <article class="step-card spotlight-card" data-stage="B" id="step-B2">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">B2 · DEBUTANT</span>
+                <span class="step-stage-tag">1. BASIC · Descoperire</span>
+              </div>
+              <h3 class="step-title">Miniavioane &amp; Modele din Carton Pretipărit</h3>
+              <p class="step-summary">Recunoașterea fuselajului, aripii și ampenajelor; folosirea corectă a foarfecii, cutterului, riglei și adezivului cu respectarea simetriei.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Execuția modelelor din carton pretipărit: Șoim, OZN, Delta, Sport, Pițigoi și Colibri</li>
+              <li>Verificarea vizuală a simetriei și primele lansări manuale în linie dreaptă</li>
+              <li>Corecții simple de traiectorie prin îndoirea fină a suprafețelor de comandă</li>
+            </ul>
+            <div class="step-footer">
+              <span>Modele: Șoim, OZN, Delta, Sport, Pițigoi, Colibri</span>
+              <span>Vol. I · Cap. 5–7</span>
+            </div>
+          </article>
+
+          <!-- B3 -->
+          <article class="step-card spotlight-card" data-stage="B" id="step-B3">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">B3 · INIȚIAT</span>
+                <span class="step-stage-tag">1. BASIC · Descoperire</span>
+              </div>
+              <h3 class="step-title">Aeromodele Funcționale din Carton, Diedru &amp; Zmee</h3>
+              <p class="step-summary">Asamblări cu mai multe componente, profilarea simplă a aripii, introducerea unghiului diedru și primele reglaje dinamice în zbor.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Construcția planoarelor: Pescăruș, Albatros, Stârc, Rândunica, Zefir, Barza, Cocor, Felix 5 și Ciocîrlia</li>
+              <li>Centraj static prin deplasarea aripii sau adăugarea lestului în botul fuselajului</li>
+              <li>Realizarea zmeielor plane/celulare și participarea la concursuri școlare de inițiere</li>
+            </ul>
+            <div class="step-footer">
+              <span>Modele: Pescăruș, Albatros, Felix 5, Zefir, Cocor</span>
+              <span>Vol. I · Cap. 7 &amp; 11</span>
+            </div>
+          </article>
+
+          <!-- M1 -->
+          <article class="step-card spotlight-card" data-stage="M" id="step-M1">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">M1 · CONSTRUCTOR ÎNCEPĂTOR</span>
+                <span class="step-stage-tag">2. MEDIU · Constructor</span>
+              </div>
+              <h3 class="step-title">Tranziția la Polistiren Extrudat &amp; Primele Piese din Balsa</h3>
+              <p class="step-summary">Trecerea de la carton la materiale modelistice consacrate, trasarea pieselor după plan și profilarea prin șlefuire.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Construcția planoarelor din polistiren extrudat și a primelor subansamble din balsa</li>
+              <li>Trasarea și debitarea pieselor după plan 1:1, șlefuirea și profilarea bordului de atac</li>
+              <li>Asamblarea corectă a aripii, fuselajului și ampenajelor; centraj static și dinamic elementar</li>
+            </ul>
+            <div class="step-footer">
+              <span>Modele: Planoare polistiren &amp; balsa inițiere</span>
+              <span>Vol. I · Cap. 8–9</span>
+            </div>
+          </article>
+
+          <!-- M2 -->
+          <article class="step-card spotlight-card" data-stage="M" id="step-M2">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">M2 · CONSTRUCTOR AUTONOM</span>
+                <span class="step-stage-tag">2. MEDIU · Constructor</span>
+              </div>
+              <h3 class="step-title">Planoare Structurale de Faza I, Împânzire &amp; Aliniere</h3>
+              <p class="step-summary">Stăpânirea structurilor portante din baghete, nervuri, lonjeroane și ranforsări, urmată de împânzire și diagnosticarea zborului.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Construcția planorului structural Faza I „Libelula” (Vol. I, pag. 82) și împânzirea structurilor ușoare</li>
+              <li>Controlul unghiului de incidență, al diedrului, al alinierii și eliminarea torsiunilor</li>
+              <li>Stabilirea CG în raport cu coarda aripii; diagnosticarea cabrajului, picajului și virajului; reparații</li>
+            </ul>
+            <div class="step-footer">
+              <span>Model etalon: Planor structural Faza I „Libelula”</span>
+              <span>Vol. I · Cap. 10</span>
+            </div>
+          </article>
+
+          <!-- M3 -->
+          <article class="step-card spotlight-card" data-stage="M" id="step-M3">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">M3 · COMPETIȚIONAL JUNIOR</span>
+                <span class="step-stage-tag">2. MEDIU · Constructor</span>
+              </div>
+              <h3 class="step-title">Planoare de Pantă, Motor de Cauciuc &amp; Concursuri Județene</h3>
+              <p class="step-summary">Cursantul construiește singur, reglează faza de urcare și planare și pregătește modelul pentru probe sportive locale și județene.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Construcția planoarelor pentru zbor la pantă și a modelelor propulsate cu motor de cauciuc</li>
+              <li>Ansamblul elice, ax, lagăr și fascicul elastic; reglajul fazei de urcare și al planării</li>
+              <li>Alegerea condițiilor meteo pentru lansare, cronometrarea duratei și participarea la concursuri județene</li>
+            </ul>
+            <div class="step-footer">
+              <span>Modele: Planor pantă &amp; Aeromodel motor cauciuc</span>
+              <span>Vol. I Final &amp; Vol. II</span>
+            </div>
+          </article>
+
+          <!-- S1 -->
+          <article class="step-card spotlight-card" data-stage="S" id="step-S1">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">S1 · MODELIST AVANSAT</span>
+                <span class="step-stage-tag">3. SPECIALIST · Avansați</span>
+              </div>
+              <h3 class="step-title">Aerodinamică, Calculul Încărcării Alare &amp; Planoare F2 / A1 / A2</h3>
+              <p class="step-summary">Matematică aplicată modelismului, meteorologie termică, interpretarea caracteristicilor tehnice și selecția materialelor după masă și rezistență.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Calculul suprafeței portante (S), al alungirii (λ = b²/S) și al încărcării alare (p = m/S)</li>
+              <li>Construirea planoarelor școlare avansate F2 („Pițigoiul”, 770 mm), A1 și A2 (F1A)</li>
+              <li>Alegerea balsei și a pinului în funcție de densitate, fibră și solicitările mecanice</li>
+            </ul>
+            <div class="step-footer">
+              <span>Modele: Planor F2 „Pițigoiul” (770 mm), A1 &amp; A2</span>
+              <span>Vol. II · Cap. 1–6</span>
+            </div>
+          </article>
+
+          <!-- S2 -->
+          <article class="step-card spotlight-card" data-stage="S" id="step-S2">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">S2 · TEHNICIAN CONSTRUCTOR</span>
+                <span class="step-stage-tag">3. SPECIALIST · Avansați</span>
+              </div>
+              <h3 class="step-title">Calculul Profilelor, Nervuri în Pachet, Chesonare &amp; Lăcuire</h3>
+              <p class="step-summary">Trasarea profilelor pe coordonate (X, Ye, Yi), executarea nervurilor în pachet și construcția aripilor și fuselajelor de înaltă precizie.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Prelucrarea nervurilor prin metoda „în pachet” (Vol. II, pag. 107), lonjeroane și chesonare</li>
+              <li>Construcția scheletelor complexe din balsa (Sopwith Camel, Fokker D.VII, monoplane pe cuple)</li>
+              <li>Împânzire cu hârtie japoneză, lăcuire multistrat cu emaillit și centraj static/dinamic de precizie</li>
+            </ul>
+            <div class="step-footer">
+              <span>Modele: Schelete Sopwith Camel &amp; Fokker D.VII</span>
+              <span>Vol. II · Cap. 7–11</span>
+            </div>
+          </article>
+
+          <!-- S3 -->
+          <article class="step-card spotlight-card" data-stage="S" id="step-S3">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">S3 · SPECIALIST ZBOR &amp; REGLAJ</span>
+                <span class="step-stage-tag">3. SPECIALIST · Avansați</span>
+              </div>
+              <h3 class="step-title">Determalizare, Pilotaj RC, Drone &amp; Tunel Aerodinamic</h3>
+              <p class="step-summary">Reglarea modelelor pentru zbor termic și la pantă, testarea experimentală în tunelul aerodinamic și inițierea în pilotajul radiocomandat.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Instalarea sistemelor de determalizare cu fitil/ceas (Vol. II, pag. 137) și sisteme simple de autodirijare</li>
+              <li>Antrenament pe simulatoare și pilotaj RC pentru planoare, motoplanoare, elicoptere și drone</li>
+              <li>Observații experimentale de portanță și rezistență în tunelul aerodinamic cu circuit închis (pag. 204)</li>
+            </ul>
+            <div class="step-footer">
+              <span>Sisteme: Determalizator, Tunel &amp; Modele RC</span>
+              <span>Vol. II · Cap. 12–16</span>
+            </div>
+          </article>
+
+          <!-- P1 -->
+          <article class="step-card spotlight-card" data-stage="P" id="step-P1">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">P1 · TEHNICIAN PERFORMANȚĂ</span>
+                <span class="step-stage-tag">4. PROFESIONIST · Performanță</span>
+              </div>
+              <h3 class="step-title">Desen Tehnic Standardizat, Control cu Șublerul &amp; Dosar FAI</h3>
+              <p class="step-summary">Proiecții, secțiuni, cotare și scări; fizica și chimia materialelor; control dimensional micrometric și documentație tehnică completă.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Utilizarea șublerului (0,05 mm), micrometrului și calibrelor pentru verificarea preciziei execuției</li>
+              <li>Întocmirea dosarului tehnic de concurs (planșe în 3 vederi, fotografii omologate, rapoarte de scară)</li>
+              <li>Machete de înaltă fidelitate (Focke-Wulf Fw 190 A, Fokker Dr.I, Junkers D-1, Sopwith Pup)</li>
+            </ul>
+            <div class="step-footer">
+              <span>Etalon: Dosar Vol. 132 &amp; Machete la Scară</span>
+              <span>Vol. III · Cap. 1–4</span>
+            </div>
+          </article>
+
+          <!-- P2 -->
+          <article class="step-card spotlight-card" data-stage="P" id="step-P2">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">P2 · PROIECTANT &amp; INTEGRATOR</span>
+                <span class="step-stage-tag">4. PROFESIONIST · Performanță</span>
+              </div>
+              <h3 class="step-title">Rachetomodele, Captive U-Control, RC/FPV, CAD/CNC &amp; Compozite</h3>
+              <p class="step-summary">Proiectarea sau modificarea substanțială a modelelor propulsoare, captive, RC și a rachetomodelelor folosind tehnologii moderne.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Rachetomodele (S3, S6, S7) și rachetoplane (S4), aeromodele propulsoare (F1B) și captive (U-Control)</li>
+              <li>Fenomene aeroelastice, solicitări structurale, integrarea radiocomenzii, electronicii și sistemelor FPV</li>
+              <li>Proiectare CAD, debitare laser, frezare CNC, imprimare 3D și laminare materiale compozite</li>
+            </ul>
+            <div class="step-footer">
+              <span>Tehnologii: Rachete S3–S7, RC/FPV, CNC &amp; 3D</span>
+              <span>Vol. III · Cap. 5–14</span>
+            </div>
+          </article>
+
+          <!-- P3 -->
+          <article class="step-card spotlight-card" data-stage="P" id="step-P3">
+            <div>
+              <div class="step-card-top">
+                <span class="step-code">P3 · EXPERT / MAESTRU MODELIST</span>
+                <span class="step-stage-tag">4. PROFESIONIST · Performanță</span>
+              </div>
+              <h3 class="step-title">Modele Originale de Lot Național, Telemetrie &amp; Mentorat</h3>
+              <p class="step-summary">Crearea modelelor de înaltă performanță pentru competiții naționale și internaționale FAI, dezvoltarea de kituri și formarea noilor generații.</p>
+            </div>
+            <ul class="step-skills">
+              <li>Machete cosmice FAI Clasa S7 (Ariane 44P Eutelsat/Brasilsat, Saturn IB, Bumper, MMR-06M, SS-520-1)</li>
+              <li>Optimizarea masei, propulsiei și stabilității prin simulări, telemetrie și teste comparative</li>
+              <li>Coordonarea proiectelor și echipelor, evaluarea modeliștilor și elaborarea de cursuri și planuri</li>
+            </ul>
+            <div class="step-footer">
+              <span>Etalon: Lotul Național FAI S7 · Ariane 44P &amp; Saturn IB</span>
+              <span>Vol. III · Sinteză &amp; Anexe</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Interactive 3-Question Diagnostic Recommender -->
+        <div class="diagnostic-panel" data-reveal>
+          <div>
+            <span class="badge badge--copper">Consilier Pedagogic Interactiv</span>
+            <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); margin-block: 0.4rem 0.6rem;">
+              Diagnostic Rapid: Pe ce treaptă (B1–P3) ar trebui să începi?
+            </h3>
+            <p style="font-size: var(--text-xs); color: var(--text-secondary); margin-bottom: 1rem;">
+              Selectează nivelul actual de îndemânare, ramura preferată și obiectivul tău pentru a identifica instantaneu grupa și treapta din <strong>STRCTURA SITE.docx</strong> (`B1–B3`, `M1–M3`, `S1–S3`, `P1–P3`).
+            </p>
+
+            <div class="diag-controls">
+              <div class="field-group">
+                <label class="field-label" for="diag-exp">1. Experiență de lucru</label>
+                <select id="diag-exp" class="field-select">
+                  <option value="novice">1. BASIC — La început (hârtie, carton pretipărit)</option>
+                  <option value="inter">2. MEDIU — Constructor începător (polistiren, balsa, Faza I)</option>
+                  <option value="adv">3. SPECIALIST — Avansat (profile, nervuri în pachet, RC)</option>
+                  <option value="comp">4. PROFESIONIST — Performanță (șubler, CNC, lot FAI)</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="diag-branch">2. Ramura tehnică</label>
+                <select id="diag-branch" class="field-select">
+                  <option value="aero">Aeromodelism (planoare, cauciuc &amp; RC)</option>
+                  <option value="rocket">Rachetomodelism (S3, S6, machete S7)</option>
+                  <option value="scale">Machete la Scară &amp; Structuri Balsa</option>
+                  <option value="naval">Navomodelism &amp; Tehnologii CAD/CNC</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="diag-goal">3. Obiectiv practic</label>
+                <select id="diag-goal" class="field-select">
+                  <option value="first">Primul model zburător echilibrat</option>
+                  <option value="balsa">Stăpânirea scheletului din balsa &amp; împânzirii</option>
+                  <option value="contest">Participare la concursuri județene / naționale FAI</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="diag-result-box" id="diag-result-box" aria-live="polite">
+            <span class="badge badge--cobalt" id="diag-rec-code">RECOMANDARE: GRUPA BASIC · TREAPTA B2 (DEBUTANT)</span>
+            <h4 style="font-family: var(--font-display); font-size: var(--text-xl); margin-block: 0.45rem 0.35rem;" id="diag-rec-title">
+              Modele din Carton Pretipărit: Șoim, OZN, Delta, Sport și Felix 5
+            </h4>
+            <p style="font-size: var(--text-xs); color: var(--text-secondary); margin-bottom: 0.9rem;" id="diag-rec-desc">
+              Conform STRCTURA SITE.docx, începe cu Treapta B2 (Debutant) și B3 (Inițiat): descarcă mai jos planșele 1:1 pentru YR-O.Z.N., YR-Delta, YR-Șoim, YR-Sport și Felix 5 pentru a exersa decuparea simetrică, diedrul de 40° și primele lansări manuale.
+            </p>
+            <button type="button" class="btn btn--secondary" id="diag-jump-btn" data-target-step="step-B2" style="min-height: 2.3rem; padding: 0.45rem 0.9rem; font-size: var(--text-xs);">
+              Evidențiază treapta în matrice ↑
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 03 — PLANȘOTECA ATELIERULUI (16 BLUEPRINTS & SCHEMATICS)
+         ==================================================================== -->
+    <section class="section" id="plansoteca">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="eyebrow">03 · Planșoteca Tehnică Integrată (Zero Linkuri Externe)</p>
+            <h2 class="section-title">
+              16 Planșe de Construcție 1:1 &amp; <em>Scheme de Curs</em> Descărcabile.
+            </h2>
+          </div>
+          <p class="section-lead">
+            Toate planșele originale din arhiva atelierului (seria <em>YR-OZN, YR-Sport, Felix&nbsp;5, YR-Albatros, YR-5&nbsp;Ciocîrlia, Planor Faza&nbsp;II, Sopwith Pup, Fokker Dr.I, Junkers D-1</em>) și planșele metodice din cele trei volume de curs sunt găzduite direct pe platformă pentru inspecție în lupă, descărcare și imprimare la scară.
+          </p>
+        </div>
+
+        <div class="plans-filter-row" data-reveal>
+          <div class="stage-filter-bar" role="tablist" aria-label="Filtrează planșele după categorie">
+            <button type="button" class="stage-pill is-active" data-plan-filter="all" role="tab" aria-selected="true">
+              Toate Planșele (16)
+            </button>
+            <button type="button" class="stage-pill" data-plan-filter="incepatori" role="tab" aria-selected="false">
+              Planoare Începători (B2–M1 · 5)
+            </button>
+            <button type="button" class="stage-pill" data-plan-filter="balsa" role="tab" aria-selected="false">
+              Planoare &amp; Tehnologie Balsa (M1–S3 · 5)
+            </button>
+            <button type="button" class="stage-pill" data-plan-filter="machete" role="tab" aria-selected="false">
+              Machete &amp; Rachetomodele (M2–P3 · 6)
+            </button>
+          </div>
+          <span class="badge badge--cobalt" id="plans-count-badge">16 planșe disponibile local</span>
+        </div>
+
+        <div class="plans-grid" id="plans-grid">
+          <!-- Plan 01 -->
+          <article class="plan-card spotlight-card" data-plan-cat="incepatori" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_yr_ozn_delta-800.webp"
+                srcset="assets/img/plan_yr_ozn_delta-800.webp 800w, assets/img/plan_yr_ozn_delta-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="456"
+                height="615"
+                alt="Planșa de construcție YR-O.Z.N. și YR-DELTA pentru începători"
+                loading="lazy">
+              <span class="plan-code-badge">PL-01 · TREAPTA B2</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Planșa „YR-O.Z.N. &amp; YR-DELTA”</h3>
+              <p class="plan-desc">
+                Primele două modele zburătoare pentru inițiere (Treapta B2 Debutant): aripă circulară (disc portant cu diedru și fante de stabilizare) și aripă delta cu fuselaj din baghetă de brad și lest în bot.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>LUNGIME FUSELAJ</span><strong>130 – 140 mm</strong></div>
+                <div><span>SECȚIUNE BAGHETĂ</span><strong>Brad 5 × 3 mm</strong></div>
+                <div><span>MATERIAL PORTANT</span><strong>Carton desen 180 g/m²</strong></div>
+                <div><span>ECHILIBRARE</span><strong>Lest plastilină în bot</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_yr_ozn_delta-1600.webp" data-lightbox-title="Planșa PL-01 · YR-O.Z.N. &amp; YR-DELTA (Treapta B2)" data-lightbox-caption="Fuselaj baghetă brad 130–140 mm (5×3 mm), aripă carton cu diedru și lest în bot.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_yr_ozn_delta-1600.webp" download="Plansa_01_YR_OZN_Delta.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 02 -->
+          <article class="plan-card spotlight-card" data-plan-cat="incepatori" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_yr_sport_soim-800.webp"
+                srcset="assets/img/plan_yr_sport_soim-800.webp 800w, assets/img/plan_yr_sport_soim-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="443"
+                height="599"
+                alt="Planșa de construcție YR-SPORT și YR-ȘOIM"
+                loading="lazy">
+              <span class="plan-code-badge">PL-02 · TREAPTA B2–B3</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Planșa „YR-SPORT &amp; YR-ȘOIM”</h3>
+              <p class="plan-desc">
+                Cuplu de planoare școlare clasice cu aripă dreaptă și eliptică, ampenaj orizontal cu profunzime reglată și suport profilat sub aripă pentru stabilirea unghiului de incidență.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>LUNGIME FUSELAJ</span><strong>165 mm</strong></div>
+                <div><span>SECȚIUNE BAGHETĂ</span><strong>Brad 5 × 3 mm</strong></div>
+                <div><span>SUPORT ARIPĂ</span><strong>Carton îndoit pe nervură</strong></div>
+                <div><span>REGLAJ ZBOR</span><strong>Flapsuri + cârmă direcție</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_yr_sport_soim-1600.webp" data-lightbox-title="Planșa PL-02 · YR-SPORT &amp; YR-ȘOIM (Treapta B2–B3)" data-lightbox-caption="Planoare școlare cu fuselaj din baghetă de brad 165 mm și suport de incidență.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_yr_sport_soim-1600.webp" download="Plansa_02_YR_Sport_Soim.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 03 -->
+          <article class="plan-card spotlight-card" data-plan-cat="incepatori" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_felix5-800.webp"
+                srcset="assets/img/plan_felix5-800.webp 800w, assets/img/plan_felix5-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="570"
+                alt="Planșa oficială a planorului din carton FELIX 5 — C.P.S.P. Oradea, prof. Gheorghe Palotaș"
+                loading="lazy">
+              <span class="plan-code-badge">PL-03 · TREAPTA B3</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Planșa „FELIX 5” (Gheorghe Palotaș)</h3>
+              <p class="plan-desc">
+                Planșă istorică editată de C.P.S.P. Oradea (prof. Gheorghe Palotaș): planor integral din carton cu fuselaj pliat în secțiune triunghiulară, întăritură interioară și șablon de diedru la 40°.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>LUNGIME FUSELAJ</span><strong>240 mm</strong></div>
+                <div><span>UNGHI DIEDRU</span><strong>40° (șablon inclus)</strong></div>
+                <div><span>CENTRU GREUTATE</span><strong>În dreptul săgeții CG</strong></div>
+                <div><span>CURBURĂ ARIPĂ</span><strong>Modelată pe muchia mesei</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_felix5-1600.webp" data-lightbox-title="Planșa PL-03 · Planor din carton FELIX 5 (Prof. Gheorghe Palotaș)" data-lightbox-caption="Planor din carton cu fuselaj de 240 mm, întăritură de bot și șablon de diedru la 40°.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_felix5-1600.webp" download="Plansa_03_Felix_5.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 04 -->
+          <article class="plan-card spotlight-card" data-plan-cat="incepatori" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan-albatros-800.webp"
+                srcset="assets/img/plan-albatros-800.webp 800w, assets/img/plan-albatros-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="511"
+                alt="Planșa de construcție a planorului școlar YR-ALBATROS"
+                loading="lazy">
+              <span class="plan-code-badge">PL-04 · TREAPTA M1</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Planșa „YR-ALBATROS” (360 mm)</h3>
+              <p class="plan-desc">
+                Planor cu aripă de mare alungire, lonjeron din furnir și seminervuri încastrate pe fuselaj din baghetă de brad de 360&nbsp;mm, ideal pentru primele concursuri școlare de durată (Treapta M1).
+              </p>
+              <div class="plan-telemetry">
+                <div><span>LUNGIME FUSELAJ</span><strong>360 mm (brad 6×4 mm)</strong></div>
+                <div><span>LONJERON ARIPĂ</span><strong>Furnir + seminervuri</strong></div>
+                <div><span>AMPENAJ</span><strong>Stabilizator + derivă</strong></div>
+                <div><span>LANSARE</span><strong>Din mână / sfoară scurtă</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan-albatros-1600.webp" data-lightbox-title="Planșa PL-04 · Planor școlar YR-ALBATROS (360 mm)" data-lightbox-caption="Planor cu fuselaj din baghetă de brad 360 mm și aripă profilată cu lonjeron din furnir.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan-albatros-1600.webp" download="Plansa_04_YR_Albatros.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 05 -->
+          <article class="plan-card spotlight-card" data-plan-cat="incepatori" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_yr5_ciocirlia-800.webp"
+                srcset="assets/img/plan_yr5_ciocirlia-800.webp 800w, assets/img/plan_yr5_ciocirlia-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="720"
+                height="523"
+                alt="Planșa de concurs a planorului din carton YR-5 CIOCÎRLIA"
+                loading="lazy">
+              <span class="plan-code-badge">PL-05 · TREAPTA M1</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Planșa „YR-5 CIOCÎRLIA” (Concurs)</h3>
+              <p class="plan-desc">
+                Planor de concurs din carton și placaj de 1,5&nbsp;mm, echipat cu seminervuri profilate și cârlig de remorcare pentru lansare cu cablu de 25&nbsp;m pe teren deschis.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>ANVERGURĂ / CLASĂ</span><strong>500 mm · Concurs școlar</strong></div>
+                <div><span>SEMINERVURI</span><strong>Placaj 1,5 mm (2 buc.)</strong></div>
+                <div><span>FUSELAJ</span><strong>Baghetă tei/brad 7 × 5 mm</strong></div>
+                <div><span>REMORCARE</span><strong>Cârlig oțel Ø 0,8 mm</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_yr5_ciocirlia-1600.webp" data-lightbox-title="Planșa PL-05 · Planor de concurs YR-5 CIOCÎRLIA" data-lightbox-caption="Planor de concurs cu seminervuri din placaj de 1,5 mm și cârlig de remorcare.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_yr5_ciocirlia-1600.webp" download="Plansa_05_YR5_Ciocirlia.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 06 -->
+          <article class="plan-card spotlight-card" data-plan-cat="balsa" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/curs_libelula_plan-800.webp"
+                srcset="assets/img/curs_libelula_plan-800.webp 800w, assets/img/curs_libelula_plan-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1131"
+                alt="Planșa tehnică a planorului Faza I LIBELULA din Volumul I de curs, pag. 82"
+                loading="lazy">
+              <span class="plan-code-badge">PL-06 · VOL. I PAG. 82</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Planor Faza I „LIBELULA” (Curs Vol. I)</h3>
+              <p class="plan-desc">
+                Planșă extrasă din <em>Aeromodele — Note de curs Începători</em> (pag.&nbsp;81–84): planor de tranziție între modelele de carton și cele cu nervuri și lonjeroane din lemn.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>CATEGORIE</span><strong>Planor Faza I Școlar</strong></div>
+                <div><span>SURSA TEHNICĂ</span><strong>Vol. I · Cap. 10, pag. 82</strong></div>
+                <div><span>STRUCTURĂ</span><strong>Lemn tei/balsa + carton</strong></div>
+                <div><span>LANSARE</span><strong>Remorcare sfoară 25 m</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/curs_libelula_plan-1600.webp" data-lightbox-title="Planșa PL-06 · Planor Faza I LIBELULA (Curs Vol. I, pag. 82)" data-lightbox-caption="Desen de ansamblu și piese componente pentru planorul Faza I Libelula.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/curs_libelula_plan-1600.webp" download="Plansa_06_Planor_Faza1_Libelula.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 07 -->
+          <article class="plan-card spotlight-card" data-plan-cat="balsa" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_planor_faza2-800.webp"
+                srcset="assets/img/plan_planor_faza2-800.webp 800w, assets/img/plan_planor_faza2-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="482"
+                alt="Planșa tehnică completă pentru Planor Faza II cu anvergura de 770 mm"
+                loading="lazy">
+              <span class="plan-code-badge">PL-07 · TREAPTA M3</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Planșa „PLANOR FAZA II” (770 mm)</h3>
+              <p class="plan-desc">
+                Planșă de atelier cu trei vederi cotate, secțiune prin fuzelaj și detaliu de încastrare a aripii cu urechi la 100&nbsp;mm, unghi de calaj de 3° și centru de greutate la 40&nbsp;mm de bordul de atac.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>ANVERGURĂ TOTALĂ</span><strong>770 mm (510 + 2×130 mm)</strong></div>
+                <div><span>LUNGIME FUSELAJ</span><strong>740 mm</strong></div>
+                <div><span>COARDĂ / CALAJ</span><strong>110 mm · Incidență +3°</strong></div>
+                <div><span>POZIȚIE CG</span><strong>40 mm de bordul de atac</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_planor_faza2-1600.webp" data-lightbox-title="Planșa PL-07 · PLANOR FAZA II (Anvergură 770 mm, Lungime 740 mm)" data-lightbox-caption="Coardă 110 mm, unghi de calaj 3°, diedru urechi 100 mm, CG la 40 mm de bordul de atac.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_planor_faza2-1600.webp" download="Plansa_07_Planor_Faza_II_770mm.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 08 -->
+          <article class="plan-card spotlight-card" data-plan-cat="balsa" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/curs_nervuri_pachet-800.webp"
+                srcset="assets/img/curs_nervuri_pachet-800.webp 800w, assets/img/curs_nervuri_pachet-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1131"
+                alt="Planșă metodică: Calibrarea nervurilor în pachet din Volumul II, pag. 107"
+                loading="lazy">
+              <span class="plan-code-badge">PL-08 · VOL. II PAG. 107</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Metoda „Nervurilor în Pachet” (Vol. II)</h3>
+              <p class="plan-desc">
+                Procedeul tehnologic fundamental din <em>Volumul&nbsp;II — Avansați</em> (pag.&nbsp;106–108): strângerea semifabricatelor de balsa între două șabloane de duraluminiu/placaj pe tije filetate și șlefuirea simultană.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>PRECIZIE PROFIL</span><strong>±0,05 mm între nervuri</strong></div>
+                <div><span>GROSIME BALSA</span><strong>1,2 – 2,0 mm (fibră lungă)</strong></div>
+                <div><span>ȘABLOANE</span><strong>Aluminiu 2 mm / Placaj 4 mm</strong></div>
+                <div><span>LOCAȘ LONJERON</span><strong>Decupat simultan în pachet</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/curs_nervuri_pachet-1600.webp" data-lightbox-title="Planșa PL-08 · Tehnologia Nervurilor în Pachet (Vol. II, pag. 107)" data-lightbox-caption="Fixarea semifabricatelor între șabloanele-etalon și calibrarea la rindea și bloc cu șmirghel.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/curs_nervuri_pachet-1600.webp" download="Plansa_08_Nervuri_In_Pachet.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 09 -->
+          <article class="plan-card spotlight-card" data-plan-cat="balsa" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/curs_determalizator-800.webp"
+                srcset="assets/img/curs_determalizator-800.webp 800w, assets/img/curs_determalizator-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1131"
+                alt="Schema mecanismului de determalizare cu fitil pentru planoare F1A, Vol. II pag. 137"
+                loading="lazy">
+              <span class="plan-code-badge">PL-09 · VOL. II PAG. 137</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Sistem de Determalizare &amp; Fitil (Vol. II)</h3>
+              <p class="plan-desc">
+                Schema cinematică a determalizatorului cu fitil și inel de cauciuc care ridică stabilizatorul la 40–45° după timpul regulamentar de zbor (180&nbsp;s), aducând planorul în coborâre parașutată sigură.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>UNGHI BRACARE</span><strong>40° – 45° stabilizator</strong></div>
+                <div><span>VITEZĂ ARDERE FITIL</span><strong>~3,5 mm / minut (calibrat)</strong></div>
+                <div><span>TUB PROTECȚIE</span><strong>Aluminiu subțire anti-foc</strong></div>
+                <div><span>CLASA VIZATĂ</span><strong>Planoare Faza II &amp; F1A</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/curs_determalizator-1600.webp" data-lightbox-title="Planșa PL-09 · Mecanismul de Determalizare cu Fitil (Vol. II, pag. 137)" data-lightbox-caption="Scoaterea controlată a planorului din curentul termic ascendent prin bracarea ampenajului orizontal.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/curs_determalizator-1600.webp" download="Plansa_09_Sistem_Determalizare.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 10 (NEW: Curs Elice & Motor de Cauciuc Vol. III pag. 65) -->
+          <article class="plan-card spotlight-card" data-plan-cat="balsa" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/curs_elice_motor_cauciuc-800.webp"
+                srcset="assets/img/curs_elice_motor_cauciuc-800.webp 800w, assets/img/curs_elice_motor_cauciuc-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1035"
+                alt="Planșă metodică: Construcția elicei și grupului motopropulsor cu motor de cauciuc din Vol. III, pag. 65"
+                loading="lazy">
+              <span class="plan-code-badge">PL-10 · VOL. III PAG. 65</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Elice &amp; Grup Motor de Cauciuc (Vol. III)</h3>
+              <p class="plan-desc">
+                Planșă tehnică din <em>Volumul&nbsp;III — Performanță</em> (pag.&nbsp;65): cioplirea palei elicei din bloc de balsa/tei, calculul pasului geometric, lagărul frontal, axul cu cârlig și fasciculul elastic uns cu ulei de ricin.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>PAS GEOMETRIC</span><strong>H = 2π · r · tg(β)</strong></div>
+                <div><span>ECHILIBRARE</span><strong>Statică pe lamă de oțel</strong></div>
+                <div><span>UNGHI ANTICOUPLU</span><strong>1,5°–2,5° dreapta + picaj</strong></div>
+                <div><span>CLASA VIZATĂ</span><strong>Treapta S1 / F1B Wakefield</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/curs_elice_motor_cauciuc-1600.webp" data-lightbox-title="Planșa PL-10 · Construcția Elicei și Grupului Motor de Cauciuc (Vol. III, pag. 65)" data-lightbox-caption="Geometria palei elicei, bucșa de rulare și montajul fasciculului de cauciuc în fuzelaj.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/curs_elice_motor_cauciuc-1600.webp" download="Plansa_10_Elice_Motor_Cauciuc.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 11 (NEW: Sopwith Pup N6453 Paper Scale Blueprint) -->
+          <article class="plan-card spotlight-card" data-plan-cat="machete" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_sopwith_pup_hartie-800.webp"
+                srcset="assets/img/plan_sopwith_pup_hartie-800.webp 800w, assets/img/plan_sopwith_pup_hartie-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1102"
+                alt="Planșă desfășurată color pentru biplanul britanic Sopwith Pup (N6453)"
+                loading="lazy">
+              <span class="plan-code-badge">PL-11 · TREAPTA M2</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Machetă Desfășurată „Sopwith Pup (N6453)”</h3>
+              <p class="plan-desc">
+                Planșă de machetă la scară pentru biplanul RNAS <em>Sopwith Scout / Pup</em> (N6453): aripi superioare și inferioare cu cocarde britanice, fuzelaj desfășurat, capotaj motor rotativ și schițe de montaj.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>PROTOTIP ISTORIC</span><strong>Sopwith Pup RNAS (1916)</strong></div>
+                <div><span>ÎNMATRICULARE</span><strong>N6453 · Cocarde tri-color</strong></div>
+                <div><span>SCHIȚE MONTAJ</span><strong>3 vederi izometrice incluse</strong></div>
+                <div><span>TREAPTA</span><strong>M2 Constructor Autonom</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_sopwith_pup_hartie-1600.webp" data-lightbox-title="Planșa PL-11 · Machetă Desfășurată Sopwith Pup (N6453)" data-lightbox-caption="Planșă completă pentru decuparea și asamblarea biplanului Sopwith Pup N6453.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_sopwith_pup_hartie-1600.webp" download="Plansa_11_Sopwith_Pup_N6453.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 12 -->
+          <article class="plan-card spotlight-card" data-plan-cat="machete" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_fokker_dr1_hartie-800.webp"
+                srcset="assets/img/plan_fokker_dr1_hartie-800.webp 800w, assets/img/plan_fokker_dr1_hartie-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="865"
+                alt="Planșă color desfășurată pentru macheta Fokker Dr.I cu camuflaj poligonal Lozenge"
+                loading="lazy">
+              <span class="plan-code-badge">PL-12 · TREAPTA M2</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Machetă „Fokker Dr.I” (Planșa I · Fuzelaj)</h3>
+              <p class="plan-desc">
+                Prima planșă a triplanului Fokker Dr.I la scară: desfășurata completă a fuzelajului, capotajul motorului rotativ Oberursel, ampenajul cruciform și camuflajul poligonal autentic <em>Lozenge</em>.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>PROTOTIP ISTORIC</span><strong>Fokker Dr.I Triplan (1917)</strong></div>
+                <div><span>CAMUFLAJ</span><strong>Poligonal Lozenge 5 culori</strong></div>
+                <div><span>COMPONENTE</span><strong>Fuzelaj + Capotă + Ampenaje</strong></div>
+                <div><span>TREAPTA</span><strong>M2 Constructor Autonom</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_fokker_dr1_hartie-1600.webp" data-lightbox-title="Planșa PL-12 · Machetă Fokker Dr.I (Planșa I — Fuzelaj &amp; Camuflaj Lozenge)" data-lightbox-caption="Planșă desfășurată la scară pentru asamblarea fuzelajului, trenului de aterizare și ampenajelor.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_fokker_dr1_hartie-1600.webp" download="Plansa_12_Fokker_DrI_Fuzelaj.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 13 (NEW: Fokker Dr.I Jasta 7 Wings + Instructions Blueprint) -->
+          <article class="plan-card spotlight-card" data-plan-cat="machete" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_fokker_dr1_jasta7-800.webp"
+                srcset="assets/img/plan_fokker_dr1_jasta7-800.webp 800w, assets/img/plan_fokker_dr1_jasta7-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1147"
+                alt="Planșa II pentru triplanul Fokker Dr.I (Jasta 7, Lt. Jacobs) cu cele 3 planuri și instrucțiuni"
+                loading="lazy">
+              <span class="plan-code-badge">PL-13 · TREAPTA M2</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Machetă „Fokker Dr.I Jasta 7” (Planșa II · Aripi)</h3>
+              <p class="plan-desc">
+                A doua planșă complementară pentru triplanul <em>Fokker Dr.I</em> pilotat de Lt.&nbsp;Josef Jacobs (Jasta&nbsp;7, 1918): cele trei planuri portante cu cruci de fier, montanții interplan și diagrama de asamblare.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>ESCADRILĂ</span><strong>Jasta 7 · Lt. Josef Jacobs</strong></div>
+                <div><span>COMPONENTE</span><strong>3 Planuri + Elice + Montanți</strong></div>
+                <div><span>DIAGRAME</span><strong>Vedere laterală și frontală</strong></div>
+                <div><span>TREAPTA</span><strong>M2 Constructor Autonom</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_fokker_dr1_jasta7-1600.webp" data-lightbox-title="Planșa PL-13 · Fokker Dr.I Jasta 7 (Planșa II — Cele 3 Planuri &amp; Instrucțiuni)" data-lightbox-caption="Cele trei planuri portante și schema de asamblare pentru Fokker Dr.I (Lt. Jacobs, Jasta 7).">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_fokker_dr1_jasta7-1600.webp" download="Plansa_13_Fokker_DrI_Jasta7_Aripi.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 14 -->
+          <article class="plan-card spotlight-card" data-plan-cat="machete" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/plan_junkers_d1_hartie-800.webp"
+                srcset="assets/img/plan_junkers_d1_hartie-800.webp 800w, assets/img/plan_junkers_d1_hartie-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1114"
+                alt="Planșă de construcție pentru monoplanul metalic Junkers D-1 din 1918"
+                loading="lazy">
+              <span class="plan-code-badge">PL-14 · TREAPTA M2</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Machetă „Junkers D-1 (1918)”</h3>
+              <p class="plan-desc">
+                Planșă detaliată cu schițe de montaj izometrice pentru primul monoplan de vânătoare cu înveliș din tablă ondulată de duraluminiu conceput de Hugo Junkers în 1918.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>PROTOTIP ISTORIC</span><strong>Junkers J.9 / D-I (1918)</strong></div>
+                <div><span>CONFIGURAȚIE</span><strong>Monoplan aripă joasă cantilever</strong></div>
+                <div><span>SCHIȚE MONTAJ</span><strong>3 diagrame axiale incluse</strong></div>
+                <div><span>TREAPTA</span><strong>M2 Constructor Autonom</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/plan_junkers_d1_hartie-1600.webp" data-lightbox-title="Planșa PL-14 · Machetă Monoplan Junkers D-1 (1918)" data-lightbox-caption="Desfășurată la scară și schițe de asamblare pentru monoplanul Junkers D-1 din 1918.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/plan_junkers_d1_hartie-1600.webp" download="Plansa_14_Junkers_D1_1918.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 15 -->
+          <article class="plan-card spotlight-card" data-plan-cat="machete" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/curs_racheta_sectiune-800.webp"
+                srcset="assets/img/curs_racheta_sectiune-800.webp 800w, assets/img/curs_racheta_sectiune-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1035"
+                alt="Anatomia și părțile componente ale unui rachetomodel din Volumul III, pag. 212"
+                loading="lazy">
+              <span class="plan-code-badge">PL-15 · VOL. III PAG. 212</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Anatomia Rachetomodelului FAI (Vol. III)</h3>
+              <p class="plan-desc">
+                Secțiune longitudinală din <em>Volumul&nbsp;III — Performanță</em> (pag.&nbsp;212–214): con ogival, corp tubular, parașută pliată cu strat de protecție termică, inel opritor și motor rachetă cu încărcătură de ejecție.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>COMPONENTE</span><strong>Con + Corp + Parașută + Motor</strong></div>
+                <div><span>STABILITATE</span><strong>CP în spatele CG (1,5–2 cal.)</strong></div>
+                <div><span>GHIDARE RAMPĂ</span><strong>2 inele de lansare coaxiale</strong></div>
+                <div><span>CLASE FAI</span><strong>S3A · S6A · S7 Machete</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/curs_racheta_sectiune-1600.webp" data-lightbox-title="Planșa PL-15 · Anatomia și Părțile Componente ale Rachetomodelului (Vol. III, pag. 212)" data-lightbox-caption="Secțiune tehnică prin rachetomodel și fazele traiectoriei balistice: lansare, zbor activ, apogeu/ejecție și aterizare.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/curs_racheta_sectiune-1600.webp" download="Plansa_15_Anatomie_Rachetomodel_FAI.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Plan 16 (NEW: Curs Stabilitate Rachetă CP-CG Vol. III pag. 225) -->
+          <article class="plan-card spotlight-card" data-plan-cat="machete" data-reveal>
+            <div class="plan-thumb-wrap">
+              <img
+                src="assets/img/curs_racheta_stabilitate-800.webp"
+                srcset="assets/img/curs_racheta_stabilitate-800.webp 800w, assets/img/curs_racheta_stabilitate-1600.webp 1600w"
+                sizes="(max-width: 768px) 92vw, 31vw"
+                width="800"
+                height="1035"
+                alt="Planșă metodică: Stabilitatea rachetomodelelor și cuplul restaurator CP-CG din Volumul III, pag. 225"
+                loading="lazy">
+              <span class="plan-code-badge">PL-16 · VOL. III PAG. 225</span>
+            </div>
+            <div class="plan-body">
+              <h3 class="plan-title">Stabilitatea Balistică CP–CG (Vol. III)</h3>
+              <p class="plan-desc">
+                Planșă de inginerie din <em>Volumul&nbsp;III — Performanță</em> (pag.&nbsp;225): determinarea Centrului de Greutate (CG) și a Centrului de Presiune (CP), acțiunea vântului lateral și formele geometrice de ampenaje stabilizatoare.
+              </p>
+              <div class="plan-telemetry">
+                <div><span>REZERVĂ STATICĂ</span><strong>(X_CP − X_CG) / d = 1,5–2,5 cal.</strong></div>
+                <div><span>METODA BARROWMAN</span><strong>Arie proiectată con + ampenaje</strong></div>
+                <div><span>TEST ÎN ZBOR LIBER</span><strong>Verificare la coardă (string test)</strong></div>
+                <div><span>CLASE VIZATE</span><strong>S3A · S6A · S7 (P1–P3)</strong></div>
+              </div>
+            </div>
+            <div class="plan-actions">
+              <button type="button" class="plan-action-btn" data-lightbox-src="assets/img/curs_racheta_stabilitate-1600.webp" data-lightbox-title="Planșa PL-16 · Stabilitatea Rachetomodelelor și Raportul CP–CG (Vol. III, pag. 225)" data-lightbox-caption="Analiza forțelor aerodinamice la unghi de atac nenul și geometria ampenajelor pentru rachetomodele FAI.">
+                <span>🔍 Lupă HD</span>
+              </button>
+              <a href="assets/img/curs_racheta_stabilitate-1600.webp" download="Plansa_16_Stabilitate_Rachetomodele_CP_CG.webp" class="plan-action-btn">
+                <span>⬇ Descarcă 1:1</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 04 — EXPOZIȚIA FAI & GALERIA LOTULUI (24 UNIQUE ARTIFACTS)
+         ==================================================================== -->
+    <section class="section section--alt" id="galerie">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="eyebrow">04 · Patrimoniul Fotografiilor Autentice de Atelier &amp; Concurs</p>
+            <h2 class="section-title">
+              Expoziția FAI &amp; <em>Galeria Tehnică</em> (24 Exponate Documentate).
+            </h2>
+          </div>
+          <p class="section-lead">
+            Fiecare fotografie din această galerie documentează piese reale realizate în atelierul lui Cornel Nistor și în loturile de concurs: de la scheletele din balsa pentru <em>Sopwith Camel</em>, <em>Fokker D.VII</em> și <em>Monoplanul Școlar</em> la lansatoarele cosmice <em>Ariane&nbsp;44P</em>, <em>Ariane&nbsp;44LP Brasilsat</em>, <em>Saturn&nbsp;IB</em> și rachetele sondă <em>MMR-06M</em>, <em>SS-520-1</em> și <em>Black Brant</em>.
+          </p>
+        </div>
+
+        <div class="plans-filter-row" data-reveal>
+          <div class="stage-filter-bar" role="tablist" aria-label="Filtrează galeria după familie tehnică">
+            <button type="button" class="stage-pill is-active" data-gallery-filter="all" role="tab" aria-selected="true">
+              Toate Exponatele (24)
+            </button>
+            <button type="button" class="stage-pill" data-gallery-filter="rachete" role="tab" aria-selected="false">
+              Machete Rachete FAI S7 (8)
+            </button>
+            <button type="button" class="stage-pill" data-gallery-filter="aero" role="tab" aria-selected="false">
+              Schelete Balsa &amp; Aviație (8)
+            </button>
+            <button type="button" class="stage-pill" data-gallery-filter="atelier" role="tab" aria-selected="false">
+              Atelier, Rachete Sondă &amp; Trofee (8)
+            </button>
+          </div>
+          <span class="badge badge--gold" id="gallery-count-badge">24 fotografii autentice</span>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- 1 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/atelier-ariane-banc-1600.webp" data-lightbox-title="Pereche de Lansatoare Ariane 44P Eutelsat pe Bancul de Lucru" data-lightbox-caption="Cele două machete Ariane 44P finisate pe masa de control, alături de șublerul metalic și documentația tehnică Vol. 132.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/atelier-ariane-banc-800.webp" width="800" height="1422" alt="Două machete Ariane 44P Eutelsat pe masa de lucru alături de șubler și documentația Vol. 132" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Cuplu Ariane 44P &amp; Dosar Vol. 132</div>
+              <div class="gallery-meta">Clasa FAI S7 · Control cu șublerul pe banc</div>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/ariane-nevopsite-1600.webp" data-lightbox-title="Două Celule Ariane 44P în Fază Albă (Înainte de Vopsire)" data-lightbox-caption="Structura primară a lansatoarelor Ariane 44P cu conurile ogivale șlefuite și boosterele PAP aliniate coaxial înainte de aplicarea marcajelor.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/ariane-nevopsite-800.webp" width="800" height="1422" alt="Două machete Ariane 44P în fază albă nevopsită pe masa din atelier" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Ariane 44P — Celule în Fază Albă</div>
+              <div class="gallery-meta">Clasa FAI S7 · Aliniere coaxială boostere</div>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/ariane-trio-atelier-1600.webp" data-lightbox-title="Trei Lansatoare Ariane 44P în Atelier (Evoluție de Serie)" data-lightbox-caption="Comparație directă pe bancul de montaj între două exemplare complet înmatriculate Eutelsat și a treia celulă aflată în grund alb.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/ariane-trio-atelier-800.webp" width="800" height="1067" alt="Trei machete Ariane 44P pe masa de lucru din atelier: două vopsite și una albă" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Trio Ariane 44P pe Bancul de Lucru</div>
+              <div class="gallery-meta">Clasa FAI S7 · Două finisate + una în grund</div>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/expo-ariane-brasilsat-1600.webp" data-lightbox-title="Ariane 44P Eutelsat (Nr. 150) &amp; Ariane 44LP Brasilsat" data-lightbox-caption="Două variante ale familiei Ariane 4 expuse în sala de jurizare împreună cu mapele de documentație tehnică.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-ariane-brasilsat-800.webp" width="800" height="600" alt="Machetele Ariane 44P Eutelsat Nr. 150 și Ariane 44LP Brasilsat în sala de concurs" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Ariane 44P (Nr. 150) &amp; Brasilsat</div>
+              <div class="gallery-meta">Clasa FAI S7 · Stand + Dosare Oficiale</div>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/expo-ariane-trio-1600.webp" data-lightbox-title="Trei Machete Ariane 4 Aliniate pentru Jurizarea Statică" data-lightbox-caption="Prezentarea comparativă a trei lansatoare Ariane 4 și a planșelor cu vederi și secțiuni la standul comisiei FAI.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-ariane-trio-800.webp" width="800" height="600" alt="Trei machete Ariane 4 aliniate pe masa de expoziție cu dosarele tehnice" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Formație de 3 Lansatoare Ariane 4</div>
+              <div class="gallery-meta">Clasa FAI S7 · Verificare la stand (400p)</div>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/expo-ariane-patru-1600.webp" data-lightbox-title="Patru Lansatoare Ariane 4 ale Lotului la Expoziția Oficială" data-lightbox-caption="Alinierea celor patru machete Ariane 4 (variantele Eutelsat și Brasilsat) alături de documentațiile tehnice pe mesele de jurizare.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-ariane-patru-800.webp" width="800" height="600" alt="Patru machete Ariane 4 expuse alături de documentația tehnică în sala de concurs" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Escadrila de 4 Lansatoare Ariane 4</div>
+              <div class="gallery-meta">Clasa FAI S7 · Aliniere completă de lot</div>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/expo-saturn-ariane-1600.webp" data-lightbox-title="Saturn IB (SA-205), Ariane 4, Bumper, Gradicom II &amp; Taurus Tomahawk" data-lightbox-caption="Grup de cinci machete cosmice și rachete sondă: Saturn IB (United States SA-205), Ariane 44LP Brasilsat, Bumper, Gradicom II și Taurus Tomahawk.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-saturn-ariane-800.webp" width="800" height="600" alt="Machetele Saturn IB SA-205, Ariane 4, Bumper, Gradicom II și Taurus Tomahawk la expoziție" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Saturn IB (SA-205) &amp; Flotila S7</div>
+              <div class="gallery-meta">Clasa FAI S7 · 5 prototipuri istorice</div>
+            </div>
+          </article>
+
+          <!-- 8 -->
+          <article class="gallery-card" data-gallery-cat="rachete" data-lightbox-src="assets/img/expo-sala-1600.webp" data-lightbox-title="Expoziția Oficială de Rachetomodele și Machete Cosmice FAI" data-lightbox-caption="Vedere largă a sălii de concurs cu peste 15 machete de lansatoare cosmice și rachete sondă însoțite de dosarele cu planșe.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-sala-800.webp" width="800" height="600" alt="Expoziție amplă de rachetomodele și machete cosmice în sala de concurs" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Sala Oficială de Verificare FAI S7</div>
+              <div class="gallery-meta">Comisia Tehnică · Dosare &amp; Machete</div>
+            </div>
+          </article>
+
+          <!-- 9 -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/fokker_d7_covered-1600.webp" data-lightbox-title="Biplanul Fokker D.VII (F 5125/18) — Model Împânzit" data-lightbox-caption="Biplan la scară cu structură din balsa acoperită cu pânză ușoară, cocarde istorice și tren de aterizare profilat.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/fokker_d7_covered-800.webp" width="800" height="463" alt="Machetă biplan Fokker D.VII F 5125/18 împânzită" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Fokker D.VII (F 5125/18) — Finisat</div>
+              <div class="gallery-meta">Treapta S2 / P1 · Vedere semiprofil spate</div>
+            </div>
+          </article>
+
+          <!-- 10 -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/fokker_d7_front-1600.webp" data-lightbox-title="Fokker D.VII — Vedere Frontală &amp; Radiator Fagure" data-lightbox-caption="Detaliu frontal cu elicea din lemn stratificat, radiatorul frontal, mitralierele Spandau și profilul gros al aripii.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/fokker_d7_front-800.webp" width="800" height="571" alt="Vedere din față a machetei Fokker D.VII împânzite" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Fokker D.VII — Grup Motopropulsor</div>
+              <div class="gallery-meta">Treapta S2 / P1 · Elice lemn + montanți N</div>
+            </div>
+          </article>
+
+          <!-- 11 -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/fokker_d7_skeleton_front-1600.webp" data-lightbox-title="Fokker D.VII — Scheletul Complet din Lemn de Balsa" data-lightbox-caption="Structura internă înainte de împânzire: nervuri profilate cu decupaje de ușurare, două lonjeroane și fuzelaj cu zăbrele.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/fokker_d7_skeleton_front-800.webp" width="800" height="427" alt="Scheletul din balsa al biplanului Fokker D.VII" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Fokker D.VII — Schelet Portant</div>
+              <div class="gallery-meta">Treapta S2 · Balsa selecționată</div>
+            </div>
+          </article>
+
+          <!-- 12 -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/sopwith_camel_front-1600.webp" data-lightbox-title="Sopwith F.1 Camel — Schelet din Balsa pe Planșă" data-lightbox-caption="Structura biplanului britanic Sopwith Camel cu motor rotativ machetă, elice din lemn și aripă cu 4 eleroane.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/sopwith_camel_front-800.webp" width="800" height="618" alt="Scheletul din balsa al biplanului Sopwith Camel" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Sopwith F.1 Camel — Schelet Față</div>
+              <div class="gallery-meta">Treapta S2 · Construcție pe planșă 1:1</div>
+            </div>
+          </article>
+
+          <!-- 13 -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/sopwith_camel_top-1600.webp" data-lightbox-title="Sopwith F.1 Camel — Vedere Superioară a Nervurilor" data-lightbox-caption="Detaliu cu decupajul central din planul superior, cabanul și lonjeroanele fuzelajului.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/sopwith_camel_top-800.webp" width="800" height="633" alt="Vedere de sus a scheletului din balsa Sopwith Camel" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Sopwith F.1 Camel — Plan Superior</div>
+              <div class="gallery-meta">Treapta S2 · Nervuri cu goluri de ușurare</div>
+            </div>
+          </article>
+
+          <!-- 14 (NEW: Monoplan Schelet Balsa 506-Model_1.png) -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/monoplan_schelet_balsa-1600.webp" data-lightbox-title="Monoplan Clasic cu Aripă Parasol — Schelet Complet din Balsa" data-lightbox-caption="Structură portantă integrală din balsa cu nervuri dese, eleroane încastrate, fuzelaj cu formatori și tren de aterizare cu roți din lemn.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/monoplan_schelet_balsa-800.webp" width="800" height="800" alt="Schelet complet din balsa al unui monoplan cu aripă parasol și elice din lemn" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Monoplan Parasol — Schelet Balsa</div>
+              <div class="gallery-meta">Treapta S1 / S2 · Structură cu eleroane</div>
+            </div>
+          </article>
+
+          <!-- 15 -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/fw190_scale_side-1600.webp" data-lightbox-title="Machetă Focke-Wulf Fw 190 A — Vedere Laterală" data-lightbox-caption="Machetă la scară cu camuflaj autentic, spirala alb-negru pe conul elicei și tren de aterizare detaliat.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/fw190_scale_side-800.webp" width="800" height="600" alt="Machetă la scară Focke-Wulf Fw 190 A vedere laterală" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Focke-Wulf Fw 190 A — Profil</div>
+              <div class="gallery-meta">Treapta P1 · Machetă de concurs la scară</div>
+            </div>
+          </article>
+
+          <!-- 16 -->
+          <article class="gallery-card" data-gallery-cat="aero" data-lightbox-src="assets/img/fw190_scale_front-1600.webp" data-lightbox-title="Focke-Wulf Fw 190 A — Vedere Semiprofil Față" data-lightbox-caption="Evidențierea capotajului motorului radial BMW 801, a ventilatorului frontal și a geometriei trenului.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/fw190_scale_front-800.webp" width="800" height="600" alt="Machetă Focke-Wulf Fw 190 A vedere din față" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Focke-Wulf Fw 190 A — Semiprofil</div>
+              <div class="gallery-meta">Treapta P1 · Finisaj &amp; Weathering</div>
+            </div>
+          </article>
+
+          <!-- 17 (FIXED: Accurate caption & 800x1422 dimensions for atelier-detaliere) -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/atelier-detaliere-1600.webp" data-lightbox-title="Maestrul Cornel Nistor în Atelierul de Rachetomodele" data-lightbox-caption="Lucru de detaliu cu mănuși de protecție la treapta superioară a lansatorului Ariane 44P, lângă utilajul CNC și documentația tehnică.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/atelier-detaliere-800.webp" width="800" height="1422" alt="Maestrul Cornel Nistor lucrând la macheta Ariane 44P în atelier" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Cornel Nistor — Detaliere Ariane 44P</div>
+              <div class="gallery-meta">Atelier · Calibrare pe bancul de montaj</div>
+            </div>
+          </article>
+
+          <!-- 18 (NEW: Second authentic angle of Cornel Nistor at CNC workbench) -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/atelier_cornel_cnc-1600.webp" data-lightbox-title="Postul de Lucru cu Router CNC &amp; Documentație Tehnică" data-lightbox-caption="Verificarea îmbinărilor dintre conul ogival și corpul machetei Ariane 44P pe bancul de lucru dotat cu router CNC.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/atelier_cornel_cnc-800.webp" width="800" height="1422" alt="Cornel Nistor verificând macheta Ariane 44P lângă routerul CNC din atelier" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Bancul de Lucru &amp; Routerul CNC</div>
+              <div class="gallery-meta">Atelier · Prelucrare de precizie &amp; control</div>
+            </div>
+          </article>
+
+          <!-- 19 -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/biplan_cauciuc_balsa-1600.webp" data-lightbox-title="Biplan din Balsa cu Motor de Cauciuc (Treapta M3 / S1)" data-lightbox-caption="Model zburător cu structură din baghete de balsa, elice de tracțiune din polimer și tren de aterizare din sârmă oțelită.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/biplan_cauciuc_balsa-800.webp" width="800" height="600" alt="Aeromodel biplan din balsa cu elice și motor de cauciuc" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Biplan cu Motor de Cauciuc</div>
+              <div class="gallery-meta">Treapta M3 / S1 · Propulsie cu fascicul elastic</div>
+            </div>
+          </article>
+
+          <!-- 20 (FIXED: Accurate caption for expo-rachete-sonda: MMR-06M, SS-520-1 & Black Brant) -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/expo-rachete-sonda-1600.webp" data-lightbox-title="Machete de Rachete Sondă: MMR-06M, SS-520-1 &amp; Black Brant" data-lightbox-caption="Trei machete de rachete sondă meteorologice și de cercetare ionosferică expuse împreună cu caietele de documentație tehnică.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-rachete-sonda-800.webp" width="800" height="600" alt="Machetele rachetelor sondă MMR-06M, SS-520-1 și Black Brant cu documentația tehnică" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Rachete Sondă: MMR-06M &amp; SS-520-1</div>
+              <div class="gallery-meta">Clasa FAI S7 · Machete + Documentații</div>
+            </div>
+          </article>
+
+          <!-- 21 (FIXED: Accurate caption & 800x450 dimensions for expo-juniori) -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/expo-juniori-1600.webp" data-lightbox-title="Seria de 7 Rachete Sondă &amp; Machete S7 cu Dosare Tehnice" data-lightbox-caption="Aliniere de șapte rachetomodele la scară (inclusiv MMR-06M și SS-520-1) cu fișele de concurs și planșele la vedere.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-juniori-800.webp" width="800" height="600" alt="Șapte machete de rachete sondă aliniate pe masa de jurizare cu dosarele tehnice" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Lotul de 7 Rachete Sondă la Stand</div>
+              <div class="gallery-meta">Clasa FAI S7 · Dosare de omologare</div>
+            </div>
+          </article>
+
+          <!-- 22 (FIXED: Accurate caption & 800x450 dimensions for expo-masa-jurizare) -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/expo-masa-jurizare-1600.webp" data-lightbox-title="Masa Comisiei de Jurizare: Machete Multistadiale S7" data-lightbox-caption="Trei machete de rachete multistadiale (Taurus Tomahawk, Gradicom II și Bumper) prezentate pe suporturi individuale în fața comisiei.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-masa-jurizare-800.webp" width="800" height="600" alt="Trei machete de rachete multistadiale pe masa comisiei de jurizare" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Masa de Jurizare — Rachete S7</div>
+              <div class="gallery-meta">Control Tehnic · Taurus Tomahawk &amp; Bumper</div>
+            </div>
+          </article>
+
+          <!-- 23 (NEW: Previously unused expo-perspectiva-800.webp) -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/expo-perspectiva-1600.webp" data-lightbox-title="Perspectivă Generală asupra Standurilor de Concurs FAI" data-lightbox-caption="Vedere de ansamblu a meselor de jurizare cu lansatoarele Ariane 4, Saturn IB și seria de rachete sondă ale clubului.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/expo-perspectiva-800.webp" width="800" height="600" alt="Vedere în perspectivă a expoziției de rachetomodele și machete cosmice" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Perspectiva Standurilor de Jurizare</div>
+              <div class="gallery-meta">Campionat Național · Secțiunea Machete S7</div>
+            </div>
+          </article>
+
+          <!-- 24 -->
+          <article class="gallery-card" data-gallery-cat="atelier" data-lightbox-src="assets/img/atelier-ariane-trofee-1600.webp" data-lightbox-title="Palmaresul de Cupe, Medalii și Trofee alături de Ariane 44P" data-lightbox-caption="Vitrina de trofee a atelierului străjuită de două machete Ariane 44P Eutelsat realizate de Cornel Nistor.">
+            <div class="gallery-img-wrap">
+              <img src="assets/img/atelier-ariane-trofee-800.webp" width="800" height="1422" alt="Vitrina cu trofee și medalii alături de două machete Ariane 44P" loading="lazy">
+            </div>
+            <div class="gallery-caption">
+              <div class="gallery-title">Vitrina de Trofee &amp; Ariane 44P</div>
+              <div class="gallery-meta">Palmares Național &amp; Internațional FAI</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 05 — LABORATORUL DE CALCULE (3 INTERACTIVE SIMULATORS)
+         ==================================================================== -->
+    <section class="section" id="laborator">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="eyebrow">05 · Inginerie Asistată &amp; Formule din Curs</p>
+            <h2 class="section-title">
+              Laboratorul de Calcule: <em>Aerodinamică, Balistică &amp; Grila FAI S7</em>.
+            </h2>
+          </div>
+          <p class="section-lead">
+            Am transpus în trei simulatoare interactive formulele exacte din tratatele Prof. Florin&nbsp;G.&nbsp;Ursa: calculul încărcării alare și al înălțimii de calaj (<strong>X = C · sin α</strong>, Vol.&nbsp;II pag.&nbsp;41), triangulația altitudinii cu două teodolite (<strong>b = 300&nbsp;m</strong>, Vol.&nbsp;III pag.&nbsp;208) și grila oficială de jurizare FAI Clasa&nbsp;S7 (500&nbsp;puncte, Vol.&nbsp;III pag.&nbsp;210).
+          </p>
+        </div>
+
+        <div class="lab-tabs-nav" role="tablist" aria-label="Selectează simulatorul din laborator">
+          <button type="button" class="lab-tab-btn is-active" data-lab-tab="aero" role="tab" aria-selected="true" aria-controls="lab-panel-aero" id="tab-btn-aero">
+            <span>01 · Aerodinamică, Calaj &amp; Coordonate Profil (X, Ye, Yi)</span>
+          </button>
+          <button type="button" class="lab-tab-btn" data-lab-tab="rocket" role="tab" aria-selected="false" aria-controls="lab-panel-rocket" id="tab-btn-rocket">
+            <span>02 · Balistică Rachetomodele (Stabilitate CP–CG &amp; 2 Teodolite)</span>
+          </button>
+          <button type="button" class="lab-tab-btn" data-lab-tab="s7" role="tab" aria-selected="false" aria-controls="lab-panel-s7" id="tab-btn-s7">
+            <span>03 · Simulator Jurizare Oficială FAI Clasa S7 (500 Puncte)</span>
+          </button>
+        </div>
+
+        <!-- TAB 1: AERODYNAMICS & AIRFOIL COORDINATES -->
+        <div class="lab-panel is-active" id="lab-panel-aero" role="tabpanel" aria-labelledby="tab-btn-aero">
+          <div class="lab-split">
+            <div class="calc-inputs-stack">
+              <span class="badge badge--copper">Formula Calajului: X = C · sin(α) · Vol. II, pag. 41 &amp; 148</span>
+              <h3 style="font-family: var(--font-display); font-size: var(--text-2xl);">
+                Parametrii Aripii &amp; Înălțimea Adaosului de Calaj
+              </h3>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="aero-span">Anvergura aripii (b)</label>
+                  <span class="range-val" id="aero-span-val">770 mm</span>
+                </div>
+                <input type="range" id="aero-span" min="240" max="2000" step="10" value="770">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="aero-chord">Coarda medie aerodinamică (C)</label>
+                  <span class="range-val" id="aero-chord-val">110 mm</span>
+                </div>
+                <input type="range" id="aero-chord" min="50" max="240" step="5" value="110">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="aero-mass">Masa totală de zbor (m)</label>
+                  <span class="range-val" id="aero-mass-val">135 g</span>
+                </div>
+                <input type="range" id="aero-mass" min="15" max="850" step="5" value="135">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="aero-alpha">Unghiul de calaj / incidență (α)</label>
+                  <span class="range-val" id="aero-alpha-val">3,0°</span>
+                </div>
+                <input type="range" id="aero-alpha" min="0.5" max="6.0" step="0.5" value="3.0">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="aero-cg-pct">Poziția Centrului de Greutate (% din C)</label>
+                  <span class="range-val" id="aero-cg-pct-val">33%</span>
+                </div>
+                <input type="range" id="aero-cg-pct" min="22" max="42" step="1" value="33">
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-results-grid">
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Suprafață Portantă (S)</span>
+                  <div class="calc-metric-val" id="aero-res-area">8,47 dm²</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Încărcare Alară (p = m/S)</span>
+                  <div class="calc-metric-val" id="aero-res-loading">15,94 g/dm²</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Alungire (λ = b²/S) &amp; CG</span>
+                  <div class="calc-metric-val" id="aero-res-aspect">λ = 7,0 · CG 36,3 mm</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Adaos Calaj (X = C·sin α)</span>
+                  <div class="calc-metric-val" id="aero-res-shim">5,76 mm</div>
+                </div>
+              </div>
+
+              <div class="calc-status-banner" id="aero-status-banner">
+                Regim optim de planor termic școlar/Faza II (12–22 g/dm²). Viteză estimată de planare lină: ~4,5 m/s.
+              </div>
+
+              <div class="airfoil-canvas-box">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+                  <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700;">
+                    PROFIL PLANOR F2 „PIȚIGOIUL” · COORDONATE REALE DIN VOL. II, PAG. 41
+                  </span>
+                  <span class="badge badge--cobalt" id="airfoil-chord-tag">C = 110 mm</span>
+                </div>
+
+                <svg id="airfoil-Interactive-svg" viewBox="0 0 440 125" width="100%" height="125" role="img" aria-label="Reprezentare grafică pe coordonate a profilului aerodinamic">
+                  <line x1="20" y1="88" x2="420" y2="88" stroke="currentColor" stroke-opacity="0.25" stroke-dasharray="4 4"></line>
+                  <path id="svg-airfoil-outline" d="M 20 84 Q 110 34, 420 88 Q 220 78, 20 84 Z" fill="var(--accent-primary-soft)" stroke="var(--accent-primary)" stroke-width="2.2"></path>
+                  <circle id="svg-cg-marker" cx="152" cy="72" r="5" fill="var(--accent-secondary)"></circle>
+                  <text id="svg-cg-label" x="162" y="68" fill="currentColor" font-family="JetBrains Mono, monospace" font-size="10">CG (36,3 mm)</text>
+                </svg>
+
+                <div class="coord-table-wrap">
+                  <table class="tech-table" aria-label="Tabel de coordonate X, Ye, Yi recalculat la coarda selectată">
+                    <thead>
+                      <tr>
+                        <th>Stație X (% C)</th>
+                        <th>0%</th>
+                        <th>2,5%</th>
+                        <th>5%</th>
+                        <th>10%</th>
+                        <th>20%</th>
+                        <th>30%</th>
+                        <th>50%</th>
+                        <th>70%</th>
+                        <th>90%</th>
+                        <th>100%</th>
+                      </tr>
+                    </thead>
+                    <tbody id="airfoil-coord-tbody">
+                      <tr>
+                        <td>Abscisă X (mm)</td>
+                        <td>0,0</td><td>2,8</td><td>5,5</td><td>11,0</td><td>22,0</td><td>33,0</td><td>55,0</td><td>77,0</td><td>99,0</td><td>110,0</td>
+                      </tr>
+                      <tr>
+                        <td>Extrados Ye (mm)</td>
+                        <td>2,2</td><td>6,1</td><td>8,0</td><td>10,2</td><td>12,0</td><td>12,3</td><td>10,5</td><td>7,4</td><td>3,2</td><td>0,5</td>
+                      </tr>
+                      <tr>
+                        <td>Intrados Yi (mm)</td>
+                        <td>2,2</td><td>0,7</td><td>0,3</td><td>0,3</td><td>1,2</td><td>2,1</td><td>2,4</td><td>1,9</td><td>0,9</td><td>0,0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 2: ROCKETRY BALLISTICS & DUAL-THEODOLITE TRIANGULATION -->
+        <div class="lab-panel" id="lab-panel-rocket" role="tabpanel" aria-labelledby="tab-btn-rocket">
+          <div class="lab-split">
+            <div class="calc-inputs-stack">
+              <span class="badge badge--cobalt">Stabilitate CP–CG &amp; Triangulație Bază b = 300 m · Vol. III, pag. 208–221</span>
+              <h3 style="font-family: var(--font-display); font-size: var(--text-2xl);">
+                Rezerva Statică în Calibre &amp; Altitudinea Măsurată cu 2 Teodolite
+              </h3>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="rock-dia">Diametrul corpului rachetei — Calibrul (d)</label>
+                  <span class="range-val" id="rock-dia-val">40 mm</span>
+                </div>
+                <input type="range" id="rock-dia" min="18" max="90" step="2" value="40">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="rock-cg">Distanța vârful conului → Centru de Greutate (X_CG)</label>
+                  <span class="range-val" id="rock-cg-val">310 mm</span>
+                </div>
+                <input type="range" id="rock-cg" min="120" max="650" step="5" value="310">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="rock-cp">Distanța vârful conului → Centru de Presiune (X_CP)</label>
+                  <span class="range-val" id="rock-cp-val">385 mm</span>
+                </div>
+                <input type="range" id="rock-cp" min="150" max="720" step="5" value="385">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="rock-base">Baza telemetrică între teodolitele A și B (b)</label>
+                  <span class="range-val" id="rock-base-val">300 m</span>
+                </div>
+                <input type="range" id="rock-base" min="100" max="500" step="25" value="300">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="rock-elev">Unghiul mediu de elevație la apogeu (γ)</label>
+                  <span class="range-val" id="rock-elev-val">52°</span>
+                </div>
+                <input type="range" id="rock-elev" min="20" max="78" step="1" value="52">
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-results-grid">
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Rezervă Statică (CP − CG) / d</span>
+                  <div class="calc-metric-val" id="rock-res-calibers">1,88 cal.</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Distanță absolută CP − CG</span>
+                  <div class="calc-metric-val" id="rock-res-diff">+75 mm</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Altitudine Apogeu (Triangulație)</span>
+                  <div class="calc-metric-val" id="rock-res-alt">192,0 m</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Clasă Impuls Recomandată</span>
+                  <div class="calc-metric-val" id="rock-res-class">S3B / S7 (5–10 Ns)</div>
+                </div>
+              </div>
+
+              <div class="calc-status-banner" id="rock-status-banner">
+                STABILITATE OPTIMĂ FAI: Centrul de presiune (CP) se află la 1,88 calibre în spatele centrului de greutate (CG). Traiectorie stabilă fără supra-stabilizare la vânt lateral.
+              </div>
+
+              <div class="airfoil-canvas-box">
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; display: block; margin-bottom: 0.5rem;">
+                  CLASIFICAREA MOTOARELOR DE RACHETOMODELE DUPĂ IMPULSUL TOTAL (VOL. III, PAG. 209 &amp; 221)
+                </span>
+                <div class="coord-table-wrap">
+                  <table class="tech-table" aria-label="Clasificarea FAI a motoarelor rachetă după impulsul total">
+                    <thead>
+                      <tr>
+                        <th>Clasa Motor</th>
+                        <th>Impuls Total (N·s)</th>
+                        <th>Subclasa FAI Durată</th>
+                        <th>Aplicații Tipice în Atelier</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1/2 A</td>
+                        <td>0,63 – 1,25 N·s</td>
+                        <td>Inițiere</td>
+                        <td>Micromodele școlare ușoare (&lt; 25 g)</td>
+                      </tr>
+                      <tr>
+                        <td>Clasa A</td>
+                        <td>1,26 – 2,50 N·s</td>
+                        <td>S3A / S4A / S6A</td>
+                        <td>Rachetomodele cu parașută (Ø 30–40 mm) și streamer</td>
+                      </tr>
+                      <tr>
+                        <td>Clasa B</td>
+                        <td>2,51 – 5,00 N·s</td>
+                        <td>S3B / S6B</td>
+                        <td>Rachetomodele de performanță și machete ușoare</td>
+                      </tr>
+                      <tr>
+                        <td>Clasa C</td>
+                        <td>5,01 – 10,00 N·s</td>
+                        <td>S3C / S7 Machete</td>
+                        <td>Machete cosmice multistadiale (Soyuz, Ariane 44P)</td>
+                      </tr>
+                      <tr>
+                        <td>Clasa D</td>
+                        <td>10,01 – 20,00 N·s</td>
+                        <td>S3D / S7 Mari</td>
+                        <td>Machete complexe de mare calibru (Saturn V, Proton)</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 3: FAI CLASS S7 500-POINT JUDGING SIMULATOR -->
+        <div class="lab-panel" id="lab-panel-s7" role="tabpanel" aria-labelledby="tab-btn-s7">
+          <div class="lab-split">
+            <div class="calc-inputs-stack">
+              <span class="badge badge--gold">Grilă Oficială FAI Clasa S7 · Volumul III, pag. 210 (Total 500 Puncte)</span>
+              <h3 style="font-family: var(--font-display); font-size: var(--text-2xl);">
+                Simulator de Jurizare la Stand (400p) + Zbor Oficial (100p)
+              </h3>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="s7-doc">1. Documentație Tehnică, Planșe &amp; Fotografii (Max 50p)</label>
+                  <span class="range-val" id="s7-doc-val">46 / 50 p</span>
+                </div>
+                <input type="range" id="s7-doc" min="0" max="50" step="1" value="46">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="s7-dim">2. Exactitatea Scării &amp; Cotelor Verificate cu Șublerul (Max 150p)</label>
+                  <span class="range-val" id="s7-dim-val">138 / 150 p</span>
+                </div>
+                <input type="range" id="s7-dim" min="0" max="150" step="1" value="138">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="s7-craft">3. Complexitate Tehnică, Texturi Gofrate &amp; Finisaj (Max 120p)</label>
+                  <span class="range-val" id="s7-craft-val">110 / 120 p</span>
+                </div>
+                <input type="range" id="s7-craft" min="0" max="120" step="1" value="110">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="s7-color">4. Autenticitate Cromatică, Cocarde &amp; Inscripții (Max 80p)</label>
+                  <span class="range-val" id="s7-color-val">74 / 80 p</span>
+                </div>
+                <input type="range" id="s7-color" min="0" max="80" step="1" value="74">
+              </div>
+
+              <div class="range-row">
+                <div class="range-header">
+                  <label for="s7-flight">5. Zbor Stabil, Ejecția Parașutei &amp; Aterizare Intactă (Max 100p)</label>
+                  <span class="range-val" id="s7-flight-val">92 / 100 p</span>
+                </div>
+                <input type="range" id="s7-flight" min="0" max="100" step="1" value="92">
+              </div>
+            </div>
+
+            <div>
+              <div class="calc-results-grid">
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Punctaj Stand (Doc + Execuție)</span>
+                  <div class="calc-metric-val" id="s7-res-static">368 / 400 p</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Punctaj Probă Zbor</span>
+                  <div class="calc-metric-val" id="s7-res-flight">92 / 100 p</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Scor Total Oficial FAI S7</span>
+                  <div class="calc-metric-val" id="s7-res-total">460 / 500 p</div>
+                </div>
+                <div class="calc-metric-box">
+                  <span class="calc-metric-label">Încadrare Competițională</span>
+                  <div class="calc-metric-val" id="s7-res-rank">Lot Național (92%)</div>
+                </div>
+              </div>
+
+              <div class="calc-status-banner" id="s7-status-banner">
+                CALIFICAT PENTRU PODIUM INTERNAȚIONAL FAI S7: Macheta obține peste 450 puncte și trece fără penalizări atât verificarea micrometrică la stand, cât și recuperarea cu parașută.
+              </div>
+
+              <div class="airfoil-canvas-box">
+                <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; display: block; margin-bottom: 0.45rem;">
+                  REGULAMENTUL TEHNIC AL PROBEI DE MACHETE S7 (VOL. III, PAG. 210)
+                </span>
+                <p style="font-size: var(--text-xs); color: var(--text-secondary); line-height: 1.65;">
+                  Conform tratatului de curs (pag.&nbsp;210), în clasa <strong>S7 — Machete de rachete cosmice</strong>: <em>„Comisia acordă pentru documentație, impresia generală, gradul de dificultate, fidelitate și exactitatea scării până la 400 de puncte (50&nbsp;p documentație + 350&nbsp;p execuție la stand). Numai concurenții care au obținut cel puțin 100 de puncte la verificarea tehnică sunt admiși la probele de zbor (maximum 100&nbsp;p). Din două lansări oficiale se ia în considerare zborul cel mai reușit.”</em>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 06 — ENCYCLOPEDIA & 3-VOLUME COURSE READER (1,017 PAGES) + GLOSSARY
+         ==================================================================== -->
+    <section class="section section--alt" id="tratate">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="eyebrow">06 · Biblioteca Didactică Integrată (Prof. Florin G. Ursa)</p>
+            <h2 class="section-title">
+              Cele 3 Tratate de Curs <em>(1.017 Pagini)</em> &amp; Dicționarul Tehnic A–Z.
+            </h2>
+          </div>
+          <p class="section-lead">
+            Am extras și structurat direct în pagină cuprinsul complet, capitolele fundamentale, tabelele dimensionale și dicționarul tehnic din cele trei volume <strong>„Aeromodele — Note de Curs”</strong> redactate de <strong>Prof.&nbsp;Florin&nbsp;G.&nbsp;Ursa</strong> (Palatul Copiilor Târgu&nbsp;Mureș, 2018–2019).
+          </p>
+        </div>
+
+        <!-- Volume Selector Cards -->
+        <div class="volumes-selector" role="tablist" aria-label="Selectează volumul de curs" data-reveal>
+          <button type="button" class="volume-tab-card is-active" data-vol-select="vol1" role="tab" aria-selected="true">
+            <span class="badge badge--copper">VOLUMUL I · EDIȚIA 2018 · 148 PAGINI</span>
+            <strong style="font-family: var(--font-display); font-size: var(--text-xl);">
+              Aeromodele — Note de Curs Începători
+            </strong>
+            <span style="font-size: var(--text-xs); color: var(--text-secondary);">
+              11 Capitole + Dicționar Tehnic (pag. 99–104) + 5 Anexe: Scule, materiale, noduri, planoare din carton și Faza I „Libelula”.
+            </span>
+          </button>
+
+          <button type="button" class="volume-tab-card" data-vol-select="vol2" role="tab" aria-selected="false">
+            <span class="badge badge--cobalt">VOLUMUL II · EDIȚIA 2019 · 275 PAGINI</span>
+            <strong style="font-family: var(--font-display); font-size: var(--text-xl);">
+              Aeromodele — Note de Curs Avansați
+            </strong>
+            <span style="font-size: var(--text-xs); color: var(--text-secondary);">
+              16 Capitole: Aerodinamică, coordonate profil F2 „Pițigoiul”, balsa, nervuri în pachet, împânzire, determalizare și tunel aerodinamic.
+            </span>
+          </button>
+
+          <button type="button" class="volume-tab-card" data-vol-select="vol3" role="tab" aria-selected="false">
+            <span class="badge badge--gold">VOLUMUL III · EDIȚIA 2019 · 594 PAGINI</span>
+            <strong style="font-family: var(--font-display); font-size: var(--text-xl);">
+              Aeromodele — Note de Curs Performanță
+            </strong>
+            <span style="font-size: var(--text-xs); color: var(--text-secondary);">
+              14 Capitole + Anexe (pag. 522–594): Rachetomodele S3/S6/S7 (pag. 206–285), planoare F1A, Wakefield F1B, zbor captiv (U-Control) și radiocomandă.
+            </span>
+          </button>
+        </div>
+
+        <!-- Interactive Chapter Reader -->
+        <div class="volume-reader-shell" data-reveal>
+          <div class="reader-grid">
+            <nav class="reader-toc" aria-label="Cuprinsul volumului selectat">
+              <div style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.75rem;" id="reader-toc-header">
+                CUPRINS VOLUMUL I (148 PAGINI)
+              </div>
+              <ul class="toc-list" id="reader-toc-list">
+                <!-- Populated dynamically by app.js with instant chapter switching -->
+                <li>
+                  <button type="button" class="toc-item-btn is-active" data-chapter-idx="0">
+                    <span>Cap. 1–4 · Istoric, NTSM, Materiale &amp; Desen Tehnic</span>
+                    <span class="toc-page-num">p. 6–51</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+
+            <article class="reader-content-pane" id="reader-content-pane" aria-live="polite">
+              <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem;">
+                <span class="badge badge--copper" id="reader-chapter-badge">VOLUMUL I · CAPITOLELE 1–4 · PAG. 6–51</span>
+                <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);" id="reader-chapter-step">
+                  Corespondență: Treapta B1–B2
+                </span>
+              </div>
+
+              <h3 class="reader-chapter-title" id="reader-chapter-title">
+                Organizarea Atelierului, Scule de Prelucrare, Adezivi și Citirea Desenului Tehnic
+              </h3>
+
+              <div class="reader-excerpt-box" id="reader-chapter-excerpt">
+                „Construcția oricărui aeromodel începe cu însușirea regulilor de protecție a muncii (NTSM), cunoașterea esențelor lemnoase (brad, tei, pin, balsa, placaj de aviație) și citirea corectă a liniilor din desenul tehnic: linie continuă groasă pentru conturul vizibil, linie întreruptă pentru muchiile acoperite și linie-punct subțire pentru axele de simetrie.”
+              </div>
+
+              <ul class="reader-keypoints" id="reader-chapter-points">
+                <li><strong>Esențe lemnoase și hârtii tehnice (pag. 19–30):</strong> Selecția baghetelor fără noduri și cu fibră dreaptă; utilizarea cartonului duplex și a hârtiei japoneze (12–22 g/m²) cu orientare longitudinală a fibrei.</li>
+                <li><strong>Adezivi în aeromodelism (pag. 26–30):</strong> Cleiul de tâmplărie și aracetul pentru structuri școlare; adezivii nitrocelulozici (Ago, Emaillit) cu uscare rapidă și rezistență la umiditate pentru balsa și împânzire.</li>
+                <li><strong>Geometria planșei (pag. 44–51):</strong> Trasarea axei de simetrie, transferul șabloanelor cu hârtie de calc sau indigo și verificarea perpendicularității ampenajelor.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+
+        <!-- Searchable Technical Glossary A-Z -->
+        <div class="glossary-shell" data-reveal>
+          <div class="glossary-toolbar">
+            <div>
+              <span class="badge badge--cobalt">Dicționarul Oficial din Vol. I (pag. 99–104) &amp; Vol. III (pag. 206–285)</span>
+              <h3 style="font-family: var(--font-display); font-size: var(--text-2xl); margin-top: 0.3rem;">
+                Glosar Tehnic de Aeromodelism &amp; Rachetomodelism
+              </h3>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 0.65rem; align-items: center;">
+              <label for="glossary-search" class="sr-only">Caută un termen în glosarul tehnic</label>
+              <input
+                type="search"
+                id="glossary-search"
+                class="field-input"
+                placeholder="Caută termen (ex: calaj, diedru, lonjeron, teodolit)..."
+                style="width: min(100%, 300px);">
+              <span class="badge badge--gold" id="glossary-count-badge">36 termeni</span>
+            </div>
+          </div>
+
+          <div class="glossary-grid" id="glossary-grid" aria-live="polite">
+            <div class="glossary-item">
+              <div class="glossary-term"><span>ALUNGIREA ARIPII (λ)</span><span>Aerodinamică</span></div>
+              <p class="glossary-def">Raportul dintre pătratul anvergurii și suprafața aripii (λ = b²/S) sau dintre anvergură și coarda medie. O alungire mare reduce rezistența indusă la planoarele termice.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>AMPENAJ</span><span>Structură</span></div>
+              <p class="glossary-def">Ansamblul suprafețelor de coadă (stabilizator orizontal + profunzor și derivă verticală + direcție) care asigură stabilitatea longitudinală și de drum.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>ANVERGURĂ (b)</span><span>Geometrie</span></div>
+              <p class="glossary-def">Distanța măsurată în linie dreaptă între extremitățile (planurile marginale) stânga și dreapta ale aripii aeromodelului.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>BALSA (Ochroma lagopus)</span><span>Materiale</span></div>
+              <p class="glossary-def">Esență lemnoasă tropicală extrem de ușoară (densitate 0,08–0,20 g/cm³) și cu rezistență specifică remarcabilă, utilizată la nervuri, lonjeroane și borduri de atac.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>BORD DE ATAC &amp; DE FUGĂ</span><span>Profil</span></div>
+              <p class="glossary-def">Partea anterioară rotunjită a aripii care întâmpină fileurile de aer (bord de atac) și muchia posterioară subțire pe unde aerul părăsește aripa (bord de fugă).</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>CALAJ (Unghi de calaj α)</span><span>Reglaj</span></div>
+              <p class="glossary-def">Unghiul format între coarda profilului aripii și axa longitudinală a fuselajului (sau coarda stabilizatorului). Înălțimea adaosului se calculează cu X = C · sin α.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>CENTRU DE GREUTATE (CG)</span><span>Echilibru</span></div>
+              <p class="glossary-def">Punctul de aplicație al rezultantei forțelor de greutate. La planoarele clasice se situează între 28% și 35% din coarda medie înapoia bordului de atac.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>CENTRU DE PRESIUNE (CP)</span><span>Balistică</span></div>
+              <p class="glossary-def">Punctul în care acționează rezultanta forțelor aerodinamice. La rachetomodele trebuie să se afle cu 1,5–2,5 calibre în spatele centrului de greutate (CG).</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>DETERMALIZATOR</span><span>Mecanism F1A</span></div>
+              <p class="glossary-def">Dispozitiv cu fitil calibrat, ceas mecanic sau electronic care brachează stabilizatorul la ~45° pentru a scoate planorul din curenții termici ascendenți.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>DIEDRU (Unghi diedru)</span><span>Stabilitate</span></div>
+              <p class="glossary-def">Unghiul format de planul semiaripilor (sau de urechile aripii) față de planul orizontal, esențial pentru auto-stabilizarea laterală în ruliu.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>EMAILLIT</span><span>Tehnologie</span></div>
+              <p class="glossary-def">Lac nitrocelulozic special care, după aplicare pe hârtia japoneză sau mătasea de împânzire, se contractă la uscare și întinde perfect învelișul aripii.</p>
+            </div>
+            <div class="glossary-item">
+              <div class="glossary-term"><span>EXTRADOS &amp; INTRADOS</span><span>Aerodinamică</span></div>
+              <p class="glossary-def">Suprafața superioară convexă a profilului (extrados, unde apare depresiunea portantă) și suprafața inferioară (intrados, unde acționează suprapresiunea).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         SECTION 07 — ÎNSCRIERE LA ATELIER & SOLICITARE PLANȘE
+         ==================================================================== -->
+    <section class="section" id="inscriere">
+      <div class="container">
+        <div class="section-header section-header--split" data-reveal>
+          <div>
+            <p class="eyebrow">07 · Înscriere la Cerc &amp; Consultanță Tehnică</p>
+            <h2 class="section-title">
+              Intră în Atelierul <em>Cornel Nistor</em>.
+            </h2>
+          </div>
+          <p class="section-lead">
+            Fie că dorești înscrierea unui elev în grupa de inițiere (<strong>B1–B3</strong>), pregătirea unui model de concurs (<strong>M1–S3</strong>) sau consultanță pentru dosarul tehnic al unei machete cosmice <strong>FAI Clasa&nbsp;S7</strong>, completează fișa de mai jos.
+          </p>
+        </div>
+
+        <div class="enrollment-grid" data-reveal>
+          <aside class="atelier-info-card">
+            <span class="badge badge--copper">Program &amp; Metodologie de Lucru</span>
+            <h3 style="font-family: var(--font-display); font-size: var(--text-2xl);">
+              Ce primește fiecare cursant la intrarea în atelier
+            </h3>
+            <ul class="step-skills" style="border-top: none; padding-top: 0; font-size: var(--text-sm); gap: 0.7rem;">
+              <li>Fișa individuală de parcurs pentru cele <strong>12 trepte de calificare (B1–P3)</strong> și instructajul NTSM.</li>
+              <li>Setul de planșe tipărite la scara 1:1 pentru grupa corespunzătoare (<em>YR-OZN, Felix 5, YR-5 Ciocîrlia, Planor Faza II</em>).</li>
+              <li>Acces la bancul de lucru, șabloanele metalice pentru nervuri în pachet, masa de aliniere și balanța de centraj.</li>
+              <li>Îndrumare directă pentru concursurile școlare, naționale și etapele FAI.</li>
+            </ul>
+
+            <div style="margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-hairline); font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted);">
+              <div>COORDONATOR TEHNIC: Maestrul Cornel Nistor</div>
+              <div style="margin-top: 0.25rem;">BAZĂ METODOLOGICĂ: Tratatele Prof. Florin G. Ursa (Vol. I–III)</div>
+            </div>
+          </aside>
+
+          <form class="enrollment-form" id="enrollment-form" novalidate>
+            <div class="form-row-2">
+              <div class="field-group">
+                <label class="field-label" for="form-name">Nume și Prenume (Elev / Părinte) *</label>
+                <input type="text" id="form-name" name="name" class="field-input" required placeholder="Ex: Andrei Popescu">
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="form-contact">Email sau Telefon de Contact *</label>
+                <input type="text" id="form-contact" name="contact" class="field-input" required placeholder="Ex: 0740 000 000 / email@exemplu.ro">
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="field-group">
+                <label class="field-label" for="form-stage">Grupa / Treapta Vizată *</label>
+                <select id="form-stage" name="stage" class="field-select" required>
+                  <option value="B1-B3">1. BASIC · Începători (Treptele B1–B3 · Explorator, Debutant, Inițiat)</option>
+                  <option value="M1-M3">2. MEDIU · Intermediari (Treptele M1–M3 · Albatros, Ciocîrlia, Planor Faza II)</option>
+                  <option value="S1-S3">3. SPECIALIST · Avansați (Treptele S1–S3 · Balsa, Sopwith Camel, Fokker D.VII)</option>
+                  <option value="P1-P3">4. PROFESIONIST · Performanță (Treptele P1–P3 · Fw 190, Lot FAI S7 Ariane 44P)</option>
+                </select>
+              </div>
+              <div class="field-group">
+                <label class="field-label" for="form-branch">Disciplina Principală</label>
+                <select id="form-branch" name="branch" class="field-select">
+                  <option value="aeromodelism">Aeromodelism (Planoare &amp; Propulsie)</option>
+                  <option value="rachetomodelism">Rachetomodelism FAI (S3, S6, S7 Machete)</option>
+                  <option value="navomodelism">Navomodelism (Carene pe cuple)</option>
+                  <option value="machete">Machete Statice de Aviație</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="form-message">Detalii despre experiența anterioară sau planșele dorite</label>
+              <textarea id="form-message" name="message" rows="3" class="field-textarea" placeholder="Menționează vârsta elevului, modelele construite până acum sau întrebările tehnice..."></textarea>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem;">
+              <button type="submit" class="btn btn--primary">
+                <span>Trimite Fișa de Înscriere</span>
+                <span aria-hidden="true">→</span>
+              </button>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted);">
+                Confirmare instantanee a treptei recomandate
+              </span>
+            </div>
+
+            <div class="form-feedback" id="form-feedback" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Accessible Lightbox Modal Dialog -->
+  <dialog class="lightbox-dialog" id="lightbox-dialog" aria-labelledby="lightbox-title">
+    <div class="lightbox-inner">
+      <div class="lightbox-top">
+        <div>
+          <span class="badge badge--copper">Inspecție Optică 1:1</span>
+          <h3 id="lightbox-title" style="font-family: var(--font-display); font-size: var(--text-xl); margin-top: 0.2rem;">
+            Exponat / Planșă Tehnică
+          </h3>
+        </div>
+        <button type="button" class="icon-btn" id="lightbox-close" aria-label="Închide fereastra de previzualizare">
+          ✕ Închide (Esc)
+        </button>
+      </div>
+      <div class="lightbox-media-wrap">
+        <img id="lightbox-img" src="assets/img/atelier-ariane-banc-1600.webp" width="1080" height="1920" alt="Previzualizare extinsă a planșei sau modelului">
+      </div>
+      <div class="lightbox-bottom">
+        <p id="lightbox-caption" style="font-size: var(--text-xs); color: var(--text-secondary); max-width: 72ch;"></p>
+        <a id="lightbox-download" href="assets/img/atelier-ariane-banc-1600.webp" download class="btn btn--secondary" style="min-height: 2.35rem; padding: 0.45rem 0.95rem; font-size: var(--text-xs);">
+          ⬇ Descarcă Imaginea HD
+        </a>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong style="color: var(--text-primary); font-family: var(--font-display); font-size: 1.15rem;">
+          Atelierul de Modelism Tehnic Cornel Nistor · Ediția V2
+        </strong>
+        <p style="margin-top: 0.25rem;">
+          Arhivă tehnică autonomă: 12 trepte de calificare (B1–P3), 16 planșe 1:1, 24 exponate documentate și sinteză din tratatele „Aeromodele — Note de Curs” (Prof. Florin G. Ursa, Vol. I–III, 1.017 pagini).
+        </p>
+      </div>
+      <div style="display: flex; gap: 1rem; font-family: var(--font-mono);">
+        <a href="#top">↑ Înapoi sus</a>
+        <a href="#plansoteca">Planșotecă 1:1</a>
+        <a href="#laborator">Simulatoare FAI</a>
+        <a href="../index.html">Vezi Ediția V1</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
